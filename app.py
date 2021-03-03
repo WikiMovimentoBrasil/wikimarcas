@@ -4,7 +4,7 @@ import json
 import requests
 from flask import Flask, render_template, request, redirect, session, url_for, jsonify
 from flask_babel import Babel
-from wikidata import query_by_type, query_metadata_of_work, query_brands_metadata, post_search_entity, filter_by_tesauros, api_category_members, api_post_request
+from wikidata import query_by_type, query_metadata_of_work, query_brands_metadata, post_search_entity, api_category_members, api_post_request, filter_by_instancia
 from oauth_wikidata import get_username, get_token
 from requests_oauthlib import OAuth1Session
 
@@ -199,7 +199,7 @@ def add_statement():
 
         if pid == 'P1684':
             claim = data['claim']
-            params["value"] = "{\"text\":\"" + str(claim) + "\",\"language\":\"" + get_locale() + "\"}",
+            params["value"] = "{\"text\":\"" + str(claim) + "\",\"language\":\"" + pt_to_ptbr(get_locale()) + "\"}",
         elif pid == 'unknownvalue':
             params["snaktype"] = 'somevalue'
         elif pid == 'P1716':
@@ -251,18 +251,21 @@ def search_entity():
     if request.method == "POST":
         data = request.get_json()
         term = data['term']
-        lang = get_locale()
+        lang = pt_to_ptbr(get_locale())
 
         data = post_search_entity(term, lang)
 
         items = []
         for item in data["search"]:
-            items.append({"qid": item["id"],
-                          "label": item["label"] if 'label' in item else '',
-                          "descr": item["description"] if 'description' in item else ''})
+            items.append(item["id"])
+            # items.append({"qid": item["id"],
+            #               "label": item["label"] if 'label' in item else '',
+            #               "descr": item["description"] if 'description' in item else ''})
 
-        if items and items.__len__() > 0:
-            return jsonify(items), 200
+        query = filter_by_instancia("wd:"+" wd:".join(items), lang=lang)
+
+        if query and query.__len__() > 0:
+            return jsonify(query), 200
         else:
             return jsonify([]), 204
 
