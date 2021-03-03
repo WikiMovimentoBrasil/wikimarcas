@@ -39,5 +39,8 @@
   },
   "Marcas": {
     "query": "SELECT DISTINCT ?marca_stat_id ?marca_qid ?marca_label ?marca_descr ?inscr_stat_id ?inscr_label ?inscr_aux WHERE { BIND(wd:QIDDAOBRA AS ?item) SERVICE wikibase:label { bd:serviceParam wikibase:language 'LANGUAGE,pt-br,pt,en,es,fr,de'. ?marca rdfs:label ?marca_label. ?marca schema:description ?marca_descr.} OPTIONAL {?item p:P1716 ?marca_aux. ?marca_aux ps:P1716 ?marca. BIND(SUBSTR(STR(?marca_aux), 42 ) AS ?marca_stat_id) BIND(SUBSTR(STR(?marca), 32 ) AS ?marca_qid)} OPTIONAL {?item p:P1684 ?inscr_aux. ?inscr_aux ps:P1684 ?inscr_label. {?inscr_aux pq:P3831 wd:Q431289.} UNION {?inscr_aux pq:P3831 wd:Q57305415.} BIND(SUBSTR(STR(?inscr_aux), 42 ) AS ?inscr_stat_id)}}"
+  },
+  "Quantidade_de_obras": {
+    "query": "SELECT (COUNT(DISTINCT(?item)) AS ?number_works) WHERE { ?item wdt:P195 wd:Q56677470; wdt:P18 ?imagem. MINUS {?item wdt:P31 wd:Q125191} MINUS {?item wdt:P31 wd:Q3305213}  MINUS {?item wdt:P31 wd:Q18965}  MINUS {?item wdt:P31 wd:Q11034}  MINUS {?item wdt:P31 wd:Q192425}  MINUS {?item wdt:P31 wd:Q1572315}  MINUS {?item wdt:P31 wd:Q4006}  MINUS {?item wdt:P31 wd:Q11060274}  MINUS {?item wdt:P31 wd:Q216526}  MINUS {?item wdt:P31 wd:Q2668072} MINUS {?item wdt:P31 wd:Q93184} MINUS {?item wdt:P31 wd:Q8011558} MINUS {?item wdt:P31 wd:Q49848} MINUS {?item wdt:P31 wd:Q23013246} MINUS {?item wdt:P31 wd:Q488053} MINUS {?item wdt:P31 wd:Q1261026} }"
   }
 }

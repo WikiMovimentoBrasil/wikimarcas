@@ -177,3 +177,12 @@ def filter_by_instancia(qids, lang="pt-br"):
                       "label": label,
                       "descr": descr})
     return query
+
+
+def query_quantidade(query):
+    data = query_wikidata(query)
+    try:
+        valor = int(data["results"]["bindings"][0]["number_works"]["value"])
+    except:
+        valor = 0
+    return valor

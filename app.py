@@ -4,7 +4,8 @@ import json
 import requests
 from flask import Flask, render_template, request, redirect, session, url_for, jsonify
 from flask_babel import Babel
-from wikidata import query_by_type, query_metadata_of_work, query_brands_metadata, post_search_entity, api_category_members, api_post_request, filter_by_instancia
+from wikidata import query_by_type, query_metadata_of_work, query_brands_metadata, post_search_entity,\
+    api_category_members, api_post_request, filter_by_instancia, query_quantidade
 from oauth_wikidata import get_username, get_token
 from requests_oauthlib import OAuth1Session
 
@@ -92,6 +93,40 @@ def pt_to_ptbr(lang):
         return lang
 
 
+##############################################################
+# PÁGINAS
+##############################################################
+# Página de erro
+@app.errorhandler(400)
+@app.errorhandler(401)
+@app.errorhandler(403)
+@app.errorhandler(404)
+@app.errorhandler(405)
+@app.errorhandler(406)
+@app.errorhandler(408)
+@app.errorhandler(409)
+@app.errorhandler(410)
+@app.errorhandler(411)
+@app.errorhandler(412)
+@app.errorhandler(413)
+@app.errorhandler(414)
+@app.errorhandler(415)
+@app.errorhandler(416)
+@app.errorhandler(417)
+@app.errorhandler(418)
+@app.errorhandler(422)
+@app.errorhandler(423)
+@app.errorhandler(424)
+@app.errorhandler(429)
+@app.errorhandler(500)
+@app.errorhandler(501)
+@app.errorhandler(502)
+@app.errorhandler(503)
+@app.errorhandler(504)
+@app.errorhandler(505)
+def page_not_found(e):
+    return render_template('error.html')
+
 # Página inicial
 @app.route('/')
 @app.route('/home')
@@ -109,16 +144,21 @@ def inicio():
 def sobre():
     username = get_username()
     lang = pt_to_ptbr(get_locale())
+    with open(os.path.join(app.static_folder, 'queries.json'), encoding="utf-8") as category_queries:
+        all_queries = json.load(category_queries)
+
+    quantidade = query_quantidade(all_queries["Quantidade_de_obras"]["query"])
     return render_template('sobre.html',
                            username=username,
-                           lang=lang)
+                           lang=get_locale(),
+                           number_works=quantidade)
 
 
 @app.route('/tutorial')
 def tutorial():
     username = get_username()
     lang = pt_to_ptbr(get_locale())
-    return render_template('example.html',
+    return render_template('tutorial.html',
                            username=username,
                            lang=lang)
 
