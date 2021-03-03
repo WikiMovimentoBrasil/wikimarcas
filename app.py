@@ -256,18 +256,16 @@ def search_entity():
         data = post_search_entity(term, lang)
 
         items = []
-        for item in data["search"]:
-            items.append(item["id"])
-            # items.append({"qid": item["id"],
-            #               "label": item["label"] if 'label' in item else '',
-            #               "descr": item["description"] if 'description' in item else ''})
+        if "search" in data:
+            for item in data["search"]:
+                items.append(item["id"])
+                # items.append({"qid": item["id"],
+                #               "label": item["label"] if 'label' in item else '',
+                #               "descr": item["description"] if 'description' in item else ''})
 
         query = filter_by_instancia("wd:"+" wd:".join(items), lang=lang)
 
-        if query and query.__len__() > 0:
-            return jsonify(query), 200
-        else:
-            return jsonify([]), 204
+        return jsonify(query), 200
 
 
 if __name__ == '__main__':
