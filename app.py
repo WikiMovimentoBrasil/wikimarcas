@@ -199,7 +199,7 @@ def add_statement():
 
         if pid == 'P1684':
             claim = data['claim']
-            params["value"] = "{\"text\":\"" + str(claim) + "\",\"language\":" + get_locale() + "}",
+            params["value"] = "{\"text\":\"" + str(claim) + "\",\"language\":\"" + get_locale() + "\"}",
         elif pid == 'unknownvalue':
             params["snaktype"] = 'somevalue'
         elif pid == 'P1716':
