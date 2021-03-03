@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+
+{% block navbar %}
+    {% with lang=lang, username=username %}
+        {% include 'topnavbar.html' %}
+    {% endwith %}
+{% endblock %}
+
+{% block title %}{{ _("Página inicial") }}{% endblock %}
+
+{% block banner %}
+    <div class="w3-row">
+        <div class="w3-container w3-quarter"></div>
+        <h1 class="w3-container w3-half" style="text-align: center; padding-top:60px; padding-bottom:60px">
+            {% if lang=="en" %}
+                <img class="banner" src="{{ url_for('static', filename= 'logo - en.svg') }}" alt='{{ _("Logotipo Wiki Museu do Ipiranga") }}' width="100%"/>
+            {% else %}
+                <img class="banner" src="{{ url_for('static', filename= 'logo - pt.svg') }}" alt='{{ _("Logotipo Wiki Museu do Ipiranga") }}' width="100%"/>
+            {% endif %}
+        </h1>
+    </div>
+    <div class="w3-row">
+        <div class="w3-container w3-quarter"></div>
+        <div class="w3-container w3-half">
+            <h2 style="text-align:center; padding-bottom:30px;">
+                {{ _("Bem-vindo(a) ao <i>Wiki Museu do Ipiranga - Qual a marca?</i>")}}
+            </h2>
+            <h3 style="text-align:center; padding-bottom:30px;">
+                {{_("Neste aplicativo, você participa do trabalho de pesquisa do Museu do Ipiranga. Sua tarefa: ")}} {{_("Identificar marcas em objetos do acervo do Museu do Ipiranga")}}. {{_("Para participar, é preciso autenticar-se; depois, escolha uma categoria abaixo para começar.")}}
+            </h3>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="w3-container w3-quarter"></div>
+    <div class="w3-container w3-half">
+        <div class="w3-row">
+            <div class="w3-container w3-quarter"></div>
+            <div class="w3-container w3-half">
+                <a class="button" href="{{ url_for('objeto', type='roupas') }}">
+                    <button type="button" style="width:100%;">
+                        {{ _('Roupas') }}
+                    </button>
+                </a>
+            </div>
+        </div>
+        <div class="w3-row">
+            <div class="w3-container w3-quarter"></div>
+            <div class="w3-container w3-half">
+                <a class="button" href="{{ url_for('objeto', type='bonecas') }}">
+                    <button type="button" style="width:100%;">
+                        {{ _('Bonecas') }}
+                    </button>
+                </a>
+            </div>
+        </div>
+        <div class="w3-row">
+            <div class="w3-container w3-quarter"></div>
+            <div class="w3-container w3-half">
+                <a class="button" href="{{ url_for('objeto', type='brinquedos') }}">
+                    <button type="button" style="width:100%;">
+                        {{ _('Brinquedos') }}
+                    </button>
+                </a>
+            </div>
+        </div>
+        <div class="w3-row">
+            <div class="w3-container w3-quarter"></div>
+            <div class="w3-container w3-half">
+                <a class="button" href="{{ url_for('objeto', type='materiais') }}">
+                    <button type="button" style="width:100%;">
+                        {{ _('Materiais de escritório e Ferramentas') }}
+                    </button>
+                </a>
+            </div>
+        </div>
+        <div class="w3-row">
+            <div class="w3-container w3-quarter"></div>
+            <div class="w3-container w3-half">
+                <a class="button" href="{{ url_for('objeto', type='miscelânea') }}">
+                    <button type="button" style="width:100%;">
+                        {{ _('Miscelânea') }}
+                    </button>
+                </a>
+            </div>
+        </div>
+        <div class="w3-row">
+            <div class="w3-container w3-half"></div>
+            <div class="w3-container w3-half"></div>
+        </div>
+    </div>
+{% endblock %}
