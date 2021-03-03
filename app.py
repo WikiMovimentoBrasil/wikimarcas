@@ -257,7 +257,9 @@ def search_entity():
 
         items = []
         for item in data["search"]:
-            items.append(item["id"])
+            items.append({"qid": item["id"],
+                          "label": item["label"] if 'label' in item else '',
+                          "descr": item["description"] if 'description' in item else ''})
 
         if items and items.__len__() > 0:
             return jsonify(items), 200
