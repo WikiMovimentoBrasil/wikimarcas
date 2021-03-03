@@ -320,8 +320,8 @@
                     $("#search_results").append('<input type="radio" id="marca_desconhecida" name="claim_option" data-tipo="unknownvalue" value="unknownvalueforbrand"> ' +
                         '<label for="marca_desconhecida" style="font-size: 125%"><i>Obra não tem marca conhecida ou não está visível</i></label><br>');
 
-                    $("#search_results").append('<input type="radio" id="marca_sem_qid" name="claim_option" data-tipo="P1684" value="'+response[0]["label"]+'"> ' +
-                        '<label for="marca_sem_qid" style="font-size: 125%">Adicionar a marca <b style="color: #004266;font-size: 125%">'+response[0]["label"]+'</b> como uma inscrição</label><br>');
+                    $("#search_results").append('<input type="radio" id="marca_sem_qid" name="claim_option" data-tipo="P1684" value="'+input+'"> ' +
+                        '<label for="marca_sem_qid" style="font-size: 125%">Adicionar a marca <b style="color: #004266;font-size: 125%">'+input+'</b> como uma inscrição</label><br>');
 
                     for (var i = 0; i < (Math.min(15,response.length)); i++){
                         $("#search_results").append('<input type="radio" id="'+response[i]["qid"]+'" name="claim_option" data-tipo="P1716" value="'+response[i]["qid"]+'"> ' +
