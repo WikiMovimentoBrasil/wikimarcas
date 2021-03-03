@@ -87,7 +87,7 @@ def set_locale():
 
 def pt_to_ptbr(lang):
     if lang == "pt" or lang == "pt-br":
-        return "pt-br,pt"
+        return "pt-br"
     else:
         return lang
 
