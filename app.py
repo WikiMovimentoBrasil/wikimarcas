@@ -97,24 +97,36 @@ def pt_to_ptbr(lang):
 @app.route('/home')
 @app.route('/inicio')
 def inicio():
-    return render_template('inicio.html')
+    username = get_username()
+    lang = pt_to_ptbr(get_locale())
+    return render_template('inicio.html',
+                           username=username,
+                           lang=lang)
 
 
 @app.route('/about')
 @app.route('/sobre')
 def sobre():
-    return render_template('sobre.html')
+    username = get_username()
+    lang = pt_to_ptbr(get_locale())
+    return render_template('sobre.html',
+                           username=username,
+                           lang=lang)
 
 
 @app.route('/tutorial')
 def tutorial():
-    return render_template('example.html')
+    username = get_username()
+    lang = pt_to_ptbr(get_locale())
+    return render_template('example.html',
+                           username=username,
+                           lang=lang)
 
 
 @app.route('/colecao/<type>')
 def objeto(type):
-    lang = get_locale()
     username = get_username()
+    lang = pt_to_ptbr(get_locale())
     with open(os.path.join(app.static_folder, 'queries.json'), encoding="utf-8") as category_queries:
         all_queries = json.load(category_queries)
 
@@ -139,10 +151,11 @@ def objeto(type):
 @app.route('/item/<qid>')
 def item(qid):
     username = get_username()
+    lang = pt_to_ptbr(get_locale())
+
     with open(os.path.join(app.static_folder, 'queries.json')) as category_queries:
         all_queries = json.load(category_queries)
 
-    lang = get_locale()
     metadata_query = all_queries["Metadados"]["query"].replace("LANGUAGE", lang).replace("QIDDAOBRA", qid)
     brands_query = all_queries["Marcas"]["query"].replace("LANGUAGE", lang).replace("QIDDAOBRA", qid)
     work_metadata = query_metadata_of_work(metadata_query, lang=lang)
