@@ -242,6 +242,7 @@ def add_statement():
             params["value"] = "{\"text\":\"" + str(claim) + "\",\"language\":\"" + pt_to_ptbr(get_locale()) + "\"}",
         elif pid == 'unknownvalue':
             params["snaktype"] = 'somevalue'
+            params["property"] = 'P1716'
         elif pid == 'P1716':
             claim = data['claim'].replace("Q", "")
             params["value"] = "{\"entity-type\":\"item\",\"numeric-id\":" + str(claim) + "}"
