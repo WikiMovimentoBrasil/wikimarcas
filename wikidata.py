@@ -54,19 +54,13 @@ def query_brands_metadata(query, qid):
     for brand_entity in result:
         get_values_lists(brand_entity, sep=";%;")
         if 'marca_stat_id' in brand_entity:
-            brand_entity['marca_stat_id'][0] = "https://www.wikidatamarca_qid.org/wiki/"+qid+"#"+brand_entity['marca_stat_id'][0].replace('-', '$', 1)
+            brand_entity['marca_stat_id'][0] = "https://www.wikidata.org/wiki/"+qid+"#"+brand_entity['marca_stat_id'][0].replace('-', '$', 1)
         if "marca_descr" not in brand_entity:
             brand_entity["marca_descr"] = ""
         if "marca_label" not in brand_entity:
             brand_entity["marca_label"] = ""
         if "marca_qid" not in brand_entity:
             brand_entity["marca_qid"] = ""
-        if "inscr_aux" not in brand_entity:
-            brand_entity["inscr_aux"] = ""
-        if "inscr_label" not in brand_entity:
-            brand_entity["inscr_label"] = ""
-        if "inscr_stat_id" in brand_entity:
-            brand_entity['inscr_stat_id'][0] = "https://www.wikidatamarca_qid.org/wiki/"+qid+"#"+brand_entity['inscr_stat_id'][0].replace('-', '$', 1)
     return result
 
 
