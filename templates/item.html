@@ -148,8 +148,8 @@
                                 </th>
                                 <td>
                                     {% if username %}<a class="button" title="{{ _('Adicionar marca') }}"><button type="button" class="btn btn-primary" data-toggle="modal" data-qid="{{ metadata.obra_qid[0] }}" data-target="#addModal" style="font-size:125%; background-color: #008000; border-color: #008000; margin: 3px; width:100%">{{ _("Adicionar") }}</button></a>{% endif %}
-                                    {% if depicts_metadata != [{'marca_descr':'','marca_label':''}] %}
-                                        {% for depicted_entity in depicts_metadata %}
+                                    {% for depicted_entity in depicts_metadata %}
+                                        {% if depicted_entity['marca_stat_id'] != [''] %}
                                             <div class="w3-container w3-twothirds" style="padding: 0">
                                                 <a class="button" tabindex="0" title="{{ depicted_entity.marca_label[0] }}">
                                                     <button type="button"
@@ -167,8 +167,8 @@
                                                     </button>
                                                 </a>
                                             </div>
-                                        {% endfor %}
-                                    {% endif %}
+                                        {% endif %}
+                                    {% endfor %}
                                 </td>
                             </tr>
                         </table>
