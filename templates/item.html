@@ -19,8 +19,8 @@
                 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators">
                         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                        {% for n in range(category_images|length) %}
-                            <li data-target="#carouselExampleIndicators" data-slide-to="{{ n }}"></li>
+                        {% for n in range(category_images|length-1) %}
+                            <li data-target="#carouselExampleIndicators" data-slide-to="{{ n + 1 }}"></li>
                         {% endfor %}
                     </ol>
                     <div class="carousel-inner">
@@ -31,7 +31,7 @@
                         </div>
                         {% for imagem_categoria in category_images[1:] %}
                             <div class="carousel-item">
-                                <img class="image_item d-block w-100" alt="{{ imagem_categoria }}" style="max-width: 100%"
+                                <img class="image_item d-block w-100" style="max-width: 100%"
                                      alt="{% if metadata.obra_label[0] %}{{ metadata.obra_label[0] }}{% else %}{{ metadata.obra_qid[0] }}{% endif %} - {{ imagem_categoria }}"
                                      src="http://commons.wikimedia.org/wiki/Special:FilePath/{{ imagem_categoria }}?width=2000px">
                             </div>
@@ -46,14 +46,14 @@
                         <span class="sr-only">{{ "Próxima" }}</span>
                     </a>
                 </div>
-                <a href="http://commons.wikimedia.org/wiki/{{ metadata.category }}">
+                <a target="_blank" href="http://commons.wikimedia.org/wiki/{{ metadata.category }}">
                     {{ _("Veja as imagens dessa obra no Wikimedia Commons") }}
                 </a>
             {% else %}
                 <img class="image_item" alt="{% if metadata.obra_label[0] %}{{ metadata.obra_label[0] }}{% else %}{{ metadata.obra_qid[0] }}{% endif %}"
                      style="max-width: 100%" src="http://commons.wikimedia.org/wiki/Special:FilePath/{{ metadata.imagem[0]}}?width=2000px">
                 {% if metadata.imagem[0]!="Calaamad suaal.png" %}
-                    <a href="http://commons.wikimedia.org/wiki/Special:FilePath/{{ metadata.imagem[0] }}">
+                    <a target="_blank" href="http://commons.wikimedia.org/wiki/Special:FilePath/{{ metadata.imagem[0] }}">
                         {{ _("Veja essa imagem no Wikimedia Commons") }}
                     </a>
                 {% endif %}
@@ -67,7 +67,7 @@
                 {% endif %}
                 <table class="table table-responsive table-striped" style="overflow: hidden; font-size: 125%; width: 100%; table-layout: fixed; overflow-wrap: break-word;">
                     <tr>
-                        <th>{{ _("Obra") }}</th>
+                        <th>{{ _("Objeto") }}</th>
                         <td><a tabindex="0" target="_blank" href="https://www.wikidata.org/wiki/{{metadata.obra_qid[0]}}">{{metadata.obra_label[0]}}</a></td>
                     </tr>
                     {% if metadata.instancia %}
@@ -77,6 +77,27 @@
                                 {% for elem in metadata.instancia %}
                                     {% set elem_parts = elem.split('@') %}
                                     <a tabindex="0" target="_blank" href="https://www.wikidata.org/wiki/{{elem_parts[0]}}">{{elem_parts[1]}}</a>{{ ";" if not loop.last }}
+                                {% endfor %}
+                            </td>
+                        </tr>
+                    {% endif %}
+                    {% if metadata.colecao %}
+                        <tr>
+                            <th>{{ _("Coleção") }}</th>
+                            <td>
+                                {% for elem in metadata.colecao %}
+                                    {% set elem_parts = elem.split('@') %}
+                                    <a tabindex="0" target="_blank" href="https://www.wikidata.org/wiki/{{elem_parts[0]}}">{{elem_parts[1]}}</a>{{ ";" if not loop.last }}
+                                {% endfor %}
+                            </td>
+                        </tr>
+                    {% endif %}
+                    {% if metadata.numero_de_inventario %}
+                        <tr>
+                            <th>{{ _("Número de inventário") }}</th>
+                            <td>
+                                {% for elem in metadata.numero_de_inventario %}
+                                    {{elem}}
                                 {% endfor %}
                             </td>
                         </tr>
@@ -111,11 +132,32 @@
                             </td>
                         </tr>
                     {% endif %}
-                    {% if metadata.encomendador %}
+                    {% if metadata.altura and metadata.largura %}
                         <tr>
-                            <th>{{ _("Encomendador") }}</th>
+                            <th>{{ _("Dimensões") }}</th>
                             <td>
-                                {% for elem in metadata.encomendador %}
+                                {% set elem_parts_altura = metadata.altura.split('@') %}
+                                {% set elem_parts_altura = metadata.largura.split('@') %}
+                                {{elem_parts_altura[0]}} {{elem_parts_altura[1]}} &times; {{elem_parts_largura[0]}} {{elem_parts_largura[1]}}
+                            </td>
+                        </tr>
+                    {% endif %}
+                    {% if metadata.metodo %}
+                        <tr>
+                            <th>{{ _("Método de fabricação") }}</th>
+                            <td>
+                                {% for elem in metadata.metodo %}
+                                    {% set elem_parts = elem.split('@') %}
+                                    <a tabindex="0" target="_blank" href="https://www.wikidata.org/wiki/{{elem_parts[0]}}">{{elem_parts[1]}}</a>{{ ";" if not loop.last }}
+                                {% endfor %}
+                            </td>
+                        </tr>
+                    {% endif %}
+                    {% if metadata.retrata %}
+                        <tr>
+                            <th>{{ _("Retrata") }}</th>
+                            <td>
+                                {% for elem in metadata.retrata %}
                                     {% set elem_parts = elem.split('@') %}
                                     <a tabindex="0" target="_blank" href="https://www.wikidata.org/wiki/{{elem_parts[0]}}">{{elem_parts[1]}}</a>{{ ";" if not loop.last }}
                                 {% endfor %}
@@ -134,20 +176,23 @@
                         </tr>
                     {% endif %}
                 </table>
-                {% if depicts_metadata %}
+                {% if not depicts_metadata %}
                     <div class="w3-container">
                         <h2>
                             {{ _("Pesquise e insira a marca do objeto. Se não encontrá-la, adicione a inscrição da marca.") }}
                         </h2>
                     </div>
-                    <div class="w3-container">
-                        <table class="table table-not-striped" style="width:100%; font-size: 125%">
-                            <tr>
-                                <th style="width:30%">
-                                    {{ _("Marca") }}
-                                </th>
-                                <td>
-                                    {% if username %}<a class="button" title="{{ _('Adicionar marca') }}"><button type="button" class="btn btn-primary" data-toggle="modal" data-qid="{{ metadata.obra_qid[0] }}" data-target="#addModal" style="font-size:125%; background-color: #008000; border-color: #008000; margin: 3px; width:100%">{{ _("Adicionar") }}</button></a>{% endif %}
+                {% endif %}
+                <div class="w3-container">
+                    <table class="table table-not-striped" style="width:100%; font-size: 125%">
+                        <tr>
+                            <th style="width:30%">
+                                {{ _("Marca") }}
+                            </th>
+                            <td>
+                                {% if username and not depicts_metadata %}
+                                    <a class="button" title="{{ _('Adicionar marca') }}"><button type="button" class="btn btn-primary" data-toggle="modal" data-qid="{{ metadata.obra_qid[0] }}" data-target="#addModal" style="font-size:125%; background-color: #008000; border-color: #008000; margin: 3px; width:100%">{{ _("Adicionar") }}</button></a>
+                                {% else %}
                                     {% for depicted_entity in depicts_metadata %}
                                         {% if depicted_entity['marca_stat_id'] != [''] %}
                                             <div class="w3-container w3-twothirds" style="padding: 0">
@@ -169,11 +214,11 @@
                                             </div>
                                         {% endif %}
                                     {% endfor %}
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-                {% endif %}
+                                {% endif %}
+                            </td>
+                        </tr>
+                    </table>
+                </div>
                 <div class="w3-container" style="text-align: center">
                     <div id="back" class="w3-container" style="justify-content: center;">
                         <a tabindex="0" href="{{ url_for('inicio') }}">
