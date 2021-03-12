@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-03-04 13:11-0300\n"
+"POT-Creation-Date: 2021-03-12 15:45-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -67,7 +67,7 @@ msgstr ""
 msgid "REPORTAR ERRO"
 msgstr ""
 
-#: templates/error.html:22 templates/item.html:181
+#: templates/error.html:22 templates/item.html:223
 msgid "VOLTAR À PÁGINA INICIAL"
 msgstr ""
 
@@ -130,7 +130,7 @@ msgid ""
 msgstr ""
 
 #: templates/item.html:70
-msgid "Obra"
+msgid "Objeto"
 msgstr ""
 
 #: templates/item.html:75
@@ -138,80 +138,96 @@ msgid "Instância de"
 msgstr ""
 
 #: templates/item.html:86
+msgid "Coleção"
+msgstr ""
+
+#: templates/item.html:97
+msgid "Número de inventário"
+msgstr ""
+
+#: templates/item.html:107
 msgid "Data"
 msgstr ""
 
-#: templates/item.html:94
+#: templates/item.html:115
 msgid "Criador(a)"
 msgstr ""
 
-#: templates/item.html:105
+#: templates/item.html:126
 msgid "Material"
 msgstr ""
 
-#: templates/item.html:116
-msgid "Encomendador"
+#: templates/item.html:137
+msgid "Dimensões"
 msgstr ""
 
-#: templates/item.html:127
+#: templates/item.html:147
+msgid "Método de fabricação"
+msgstr ""
+
+#: templates/item.html:158
+msgid "Retrata"
+msgstr ""
+
+#: templates/item.html:169
 msgid "Versão audível"
 msgstr ""
 
-#: templates/item.html:131
+#: templates/item.html:173
 msgid "Seu navegador não suporta este elemento de áudio"
 msgstr ""
 
-#: templates/item.html:140
+#: templates/item.html:182
 msgid ""
 "Pesquise e insira a marca do objeto. Se não encontrá-la, adicione a "
 "inscrição da marca."
 msgstr ""
 
-#: templates/item.html:147
+#: templates/item.html:189
 msgid "Marca"
 msgstr ""
 
-#: templates/item.html:150
+#: templates/item.html:192
 msgid "Adicionar marca"
 msgstr ""
 
-#: templates/item.html:150
+#: templates/item.html:192
 msgid "Adicionar"
 msgstr ""
 
-#: templates/item.html:195 templates/item.html:199 templates/item.html:216
+#: templates/item.html:237 templates/item.html:241 templates/item.html:258
 msgid "Declaração"
 msgstr ""
 
-#: templates/item.html:199
+#: templates/item.html:241
 msgid "Descrição da declaração"
 msgstr ""
 
-#: templates/item.html:202 templates/item.html:230
+#: templates/item.html:244 templates/item.html:272
 msgid "Cancelar"
 msgstr ""
 
-#: templates/item.html:205
+#: templates/item.html:247
 msgid "Ir para declaração"
 msgstr ""
 
-#: templates/item.html:220
+#: templates/item.html:262
 msgid "Adicionar declaração:"
 msgstr ""
 
-#: templates/item.html:221
+#: templates/item.html:263
 msgid "Pesquise"
 msgstr ""
 
-#: templates/item.html:223
+#: templates/item.html:265
 msgid "Selecione uma opção:"
 msgstr ""
 
-#: templates/item.html:231
+#: templates/item.html:273
 msgid "Adicionar declaração"
 msgstr ""
 
-#: templates/item.html:332
+#: templates/item.html:374
 msgid "Selecione um elemento"
 msgstr ""
 
