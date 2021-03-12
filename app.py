@@ -68,6 +68,7 @@ def oauth_callback():
 
     return redirect(next_page)
 
+
 # Função para pegar a língua de preferência do usuário
 @BABEL.localeselector
 def get_locale():
