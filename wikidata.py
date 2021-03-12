@@ -53,6 +53,8 @@ def query_brands_metadata(query, qid):
     result = data["results"]["bindings"]
     for brand_entity in result:
         get_values_lists(brand_entity, sep=";%;")
+        if not brand_entity:
+            return None
         if 'marca_stat_id' in brand_entity:
             brand_entity['marca_stat_id'][0] = "https://www.wikidata.org/wiki/"+qid+"#"+brand_entity['marca_stat_id'][0].replace('-', '$', 1)
         else:
