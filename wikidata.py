@@ -1,6 +1,8 @@
 import requests
 import roman
 import re
+import random
+import math
 from flask import current_app, session
 from requests_oauthlib import OAuth1Session
 
@@ -27,14 +29,29 @@ def query_by_type(query, lang="pt-br"):
             "qid": image["item_qid"]["value"],
             "label": image["item_label"]["value"],
             "imagem": image["imagem"]["value"],
-            "category": image["category"]["value"] if 'category' in image else ''
+            "category": image["category"]["value"] if 'category' in image else '',
         })
 
     return images
 
 
+def query_next_qid(query):
+    data = query_wikidata(query)
+    result = data["results"]["bindings"]
+    items = []
+    for item in result:
+        if "obra_next_qid" in item:
+            items.append(item["obra_next_qid"]["value"])
+    try:
+        next_qid = random.choice(items)
+    except IndexError:
+        next_qid = None
+    return next_qid
+
+
 def query_metadata_of_work(query, lang="pt-br"):
     data = query_wikidata(query)
+    result = None
     if "results" in data and "bindings" in data["results"]:
         result = data["results"]["bindings"][0]
         format_dates_in_result(result, lang)
@@ -56,7 +73,8 @@ def query_brands_metadata(query, qid):
         if not brand_entity:
             return None
         if 'marca_stat_id' in brand_entity:
-            brand_entity['marca_stat_id'][0] = "https://www.wikidata.org/wiki/"+qid+"#"+brand_entity['marca_stat_id'][0].replace('-', '$', 1)
+            brand_entity['marca_stat_id'][0] = "https://www.wikidata.org/wiki/" + \
+                                               qid + "#" + brand_entity['marca_stat_id'][0].replace('-', '$', 1)
         else:
             brand_entity['marca_stat_id'] = ['']
         if "marca_descr" not in brand_entity:
@@ -163,7 +181,14 @@ def post_search_entity(term, lang="pt-br"):
 def filter_by_instancia(qids, lang="pt-br"):
     if lang == "pt-br" or lang == "pt":
         lang = "pt-br,pt"
-    data = query_wikidata("SELECT DISTINCT ?item_qid ?item_label ?item_descr WHERE { SERVICE wikibase:label {bd:serviceParam wikibase:language '"+lang+"'. ?item rdfs:label ?item_label. ?item schema:description ?item_descr.} VALUES ?item {"+qids+"} VALUES ?instancia {wd:Q431289 wd:Q1412386 wd:Q167270 wd:Q5} ?item wdt:P31 ?instancia. BIND(SUBSTR(STR(?item),32) AS ?item_qid) }")
+    data = query_wikidata("SELECT DISTINCT ?item_qid ?item_label ?item_descr WHERE { "
+                          "SERVICE wikibase:label {bd:serviceParam wikibase:language '"
+                          + lang +
+                          "'. ?item rdfs:label ?item_label. ?item schema:description ?item_descr.} "
+                          "VALUES ?item {"
+                          + qids +
+                          "} VALUES ?instancia {wd:Q431289 wd:Q1412386 wd:Q167270 wd:Q5} "
+                          "?item wdt:P31 ?instancia. BIND(SUBSTR(STR(?item),32) AS ?item_qid) }")
     results = data["results"]["bindings"]
     query = []
     for item in results:
@@ -189,6 +214,6 @@ def query_quantidade(query):
     data = query_wikidata(query)
     try:
         valor = int(data["results"]["bindings"][0]["number_works"]["value"])
-    except:
+    except IndexError:
         valor = 0
     return valor

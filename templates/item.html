@@ -186,13 +186,15 @@
                 <div class="w3-container">
                     <table class="table table-not-striped" style="width:100%; font-size: 125%">
                         <tr>
-                            <th style="width:30%">
-                                {{ _("Marca") }}
-                            </th>
+                            {% if depicts_metadata %}
+                                <th style="width:30%">
+                                    {{ _("Marca") }}
+                                </th>
+                            {% endif %}
                             <td>
                                 {% if username and not depicts_metadata %}
                                     <a class="button" title="{{ _('Adicionar marca') }}"><button type="button" class="btn btn-primary" data-toggle="modal" data-qid="{{ metadata.obra_qid[0] }}" data-target="#addModal" style="font-size:125%; background-color: #008000; border-color: #008000; margin: 3px; width:100%">{{ _("Adicionar") }}</button></a>
-                                {% else %}
+                                {% elif depicts_metadata %}
                                     {% for depicted_entity in depicts_metadata %}
                                         {% if depicted_entity['marca_stat_id'] != [''] %}
                                             <div class="w3-container w3-twothirds" style="padding: 0">
@@ -224,6 +226,13 @@
                         <a tabindex="0" href="{{ url_for('inicio') }}">
                             <button type="button" class="button" id="back" style="background-color:#D04125;width:100%;margin:0">
                                 {{_("VOLTAR À PÁGINA INICIAL")}}
+                            </button>
+                        </a>
+                    </div>
+                    <div id="next" class="w3-container" style="justify-content: center;">
+                        <a tabindex="0" href="{{ url_for('item', qid=next_qid) }}">
+                            <button type="button" class="button" id="back" style="background-color:#4D4D4D;width:100%;margin:0;color:white">
+                                {{_("PULAR ESTE ITEM")}}
                             </button>
                         </a>
                     </div>

@@ -5,7 +5,7 @@ import requests
 from flask import Flask, render_template, request, redirect, session, url_for, jsonify
 from flask_babel import Babel
 from wikidata import query_by_type, query_metadata_of_work, query_brands_metadata, post_search_entity,\
-    api_category_members, api_post_request, filter_by_instancia, query_quantidade
+    api_category_members, api_post_request, filter_by_instancia, query_quantidade, query_next_qid
 from oauth_wikidata import get_username, get_token
 from requests_oauthlib import OAuth1Session
 
@@ -165,7 +165,7 @@ def tutorial():
 
 
 @app.route('/colecao/<type>')
-def objeto(type):
+def colecao(type):
     username = get_username()
     lang = pt_to_ptbr(get_locale())
     with open(os.path.join(app.static_folder, 'queries.json'), encoding="utf-8") as category_queries:
@@ -199,8 +199,10 @@ def item(qid):
 
     metadata_query = all_queries["Metadados"]["query"].replace("LANGUAGE", lang).replace("QIDDAOBRA", qid)
     brands_query = all_queries["Marcas"]["query"].replace("LANGUAGE", lang).replace("QIDDAOBRA", qid)
+    next_qid_query = all_queries["Next_qid"]["query"].replace("QIDDAOBRA", qid)
     work_metadata = query_metadata_of_work(metadata_query, lang=lang)
     work_depicts = query_brands_metadata(brands_query, qid)
+    next_qid = query_next_qid(next_qid_query)
 
     if "category" in work_metadata:
         category_images = api_category_members(work_metadata["category"])
@@ -213,7 +215,8 @@ def item(qid):
                            category_images=category_images,
                            username=username,
                            lang=lang,
-                           qid=qid)
+                           qid=qid,
+                           next_qid=next_qid)
 
 ##############################################################
 # CONSULTAS E REQUISIÇÕES
