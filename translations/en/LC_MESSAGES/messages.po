@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-03-12 15:45-0300\n"
+"POT-Creation-Date: 2021-03-13 02:14-0300\n"
 "PO-Revision-Date: 2021-03-04 13:11-0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -18,24 +18,24 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.0\n"
 
-#: templates/base.html:17 templates/colecao.html:21 templates/inicio.html:9
+#: templates/base.html:18 templates/colecao.html:21 templates/inicio.html:9
 #: templates/topnavbar.html:2
 msgid "Página inicial"
 msgstr "Homepage"
 
-#: templates/base.html:17
+#: templates/base.html:18
 msgid "Wiki Museu do Ipiranga - Qual a marca?"
 msgstr "Wiki Museu do Ipiranga - Which brand?"
 
-#: templates/base.html:36 templates/base.html:38
+#: templates/base.html:37 templates/base.html:39
 msgid "Logotipo Wiki Museu do Ipiranga - Qual a marca?"
 msgstr "Logo of Wiki Museu do Ipiranga - Which brand?"
 
-#: templates/base.html:47
+#: templates/base.html:48
 msgid "Projeto Novo Museu do Ipiranga"
 msgstr "Novo Museu do Ipiranga Project"
 
-#: templates/base.html:48
+#: templates/base.html:49
 #, python-format
 msgid ""
 "<i>Wiki Museu do Ipiranga - Qual a marca?</i> é um aplicativo "
@@ -76,7 +76,7 @@ msgstr "Something went wrong!"
 msgid "REPORTAR ERRO"
 msgstr "REPORT ERROR"
 
-#: templates/error.html:22 templates/item.html:223
+#: templates/error.html:22 templates/item.html:228
 msgid "VOLTAR À PÁGINA INICIAL"
 msgstr "GO TO HOMEPAGE"
 
@@ -200,51 +200,81 @@ msgstr ""
 "Search for and enter the object's brand. If you can't find it, add the "
 "brand inscription."
 
-#: templates/item.html:189
+#: templates/item.html:191
 msgid "Marca"
 msgstr "Brand"
 
-#: templates/item.html:192
+#: templates/item.html:196
 msgid "Adicionar marca"
 msgstr "Add brand"
 
-#: templates/item.html:192
+#: templates/item.html:196
 msgid "Adicionar"
 msgstr "Add"
 
-#: templates/item.html:237 templates/item.html:241 templates/item.html:258
+#: templates/item.html:235
+msgid "PULAR ESTE ITEM"
+msgstr "SKIP THIS ITEM"
+
+#: templates/item.html:249 templates/item.html:253 templates/item.html:270
 msgid "Declaração"
 msgstr "Statement"
 
-#: templates/item.html:241
+#: templates/item.html:253
 msgid "Descrição da declaração"
 msgstr "Statement description"
 
-#: templates/item.html:244 templates/item.html:272
+#: templates/item.html:256 templates/item.html:289
 msgid "Cancelar"
 msgstr "Cancel"
 
-#: templates/item.html:247
+#: templates/item.html:259
 msgid "Ir para declaração"
 msgstr "Go to statement"
 
-#: templates/item.html:262
+#: templates/item.html:275
+msgid ""
+"Se o objeto possui uma marca visível nas imagens disponíveis, pesquise-a "
+"pelo nome no banco de dados."
+msgstr ""
+"If the object has a visible brand on the available images, search for it "
+"by name in the database."
+
+#: templates/item.html:276
+msgid ""
+"Caso a marca não esteja cadastrada, selecione a opção inserir a marca "
+"como uma inscrição."
+msgstr ""
+"If the brand is not present, select the option to insert the brand as an inscription."
+
+#: templates/item.html:277
+msgid ""
+"Nos casos em que o objeto não possua marca ou esta não esteja visível, "
+"selecione a opção "
+msgstr ""
+"In cases where the object has no brand or is not visible, select the option "
+
+#: templates/item.html:277 templates/item.html:285
+msgid "Obra não tem marca conhecida ou não está visível"
+msgstr "Work has no known brand or is not visible"
+
+#: templates/item.html:279
 msgid "Adicionar declaração:"
 msgstr "Add statement:"
 
-#: templates/item.html:263
+#: templates/item.html:280
 msgid "Pesquise"
 msgstr "Search"
 
-#: templates/item.html:265
+#: templates/item.html:282
 msgid "Selecione uma opção:"
 msgstr "Select an option:"
 
-#: templates/item.html:273
+#: templates/item.html:290
 msgid "Adicionar declaração"
 msgstr "Add statement"
 
-#: templates/item.html:374
+#: templates/item.html:391
 msgid "Selecione um elemento"
 msgstr "Select an element"
 

@@ -1,7 +1,7 @@
 /*!
 	Zoom 1.7.21
 	license: MIT
-	http://www.jacklmoore.com/zoom
+	https://www.jacklmoore.com/zoom
 */
 (function ($) {
 	var defaults = {
