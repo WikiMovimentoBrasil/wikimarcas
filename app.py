@@ -2,7 +2,7 @@ import yaml
 import os
 import json
 import requests
-from flask import Flask, render_template, request, redirect, session, url_for, jsonify
+from flask import Flask, render_template, request, redirect, session, url_for, jsonify, g
 from flask_babel import Babel
 from wikidata import query_by_type, query_metadata_of_work, query_brands_metadata, post_search_entity,\
     api_category_members, api_post_request, filter_by_instancia, query_quantidade, query_next_qid
@@ -14,6 +14,16 @@ app = Flask(__name__)
 app.config.update(yaml.safe_load(open(os.path.join(__dir__, 'config.yaml'))))
 
 BABEL = Babel(app)
+
+
+@app.before_request
+def init_profile():
+    g.profiling = []
+
+
+@app.before_request
+def global_user():
+    g.user = get_username()
 
 
 @app.route('/login')

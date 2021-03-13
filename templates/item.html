@@ -192,7 +192,7 @@
                                 </th>
                             {% endif %}
                             <td>
-                                {% if not depicts_metadata %}
+                                {% if username and not depicts_metadata %}
                                     <a class="button" title="{{ _('Adicionar marca') }}"><button type="button" class="btn btn-primary" data-toggle="modal" data-qid="{{ metadata.obra_qid[0] }}" data-target="#addModal" style="font-size:125%; background-color: #008000; border-color: #008000; margin: 3px; width:100%">{{ _("Adicionar") }}</button></a>
                                 {% elif depicts_metadata %}
                                     {% for depicted_entity in depicts_metadata %}
