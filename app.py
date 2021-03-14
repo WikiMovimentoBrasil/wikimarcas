@@ -94,7 +94,9 @@ def set_locale():
     lang = request.args.get('lang')
 
     session["lang"] = lang
-    return redirect(next_page)
+    redirected = redirect(next_page)
+    redirected.delete_cookie('session', '/item')
+    return redirected
 
 
 def pt_to_ptbr(lang):
