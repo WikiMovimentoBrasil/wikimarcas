@@ -36,7 +36,6 @@
     <div class="w3-container w3-quarter"></div>
     <div class="w3-container w3-half">
         <div class="w3-row">
-            <div class="w3-container w3-quarter"></div>
             <div class="w3-container w3-half">
                 <a class="button" href="{{ url_for('colecao', type='roupas') }}">
                     <button type="button" style="width:100%;">
@@ -44,9 +43,6 @@
                     </button>
                 </a>
             </div>
-        </div>
-        <div class="w3-row">
-            <div class="w3-container w3-quarter"></div>
             <div class="w3-container w3-half">
                 <a class="button" href="{{ url_for('colecao', type='bonecas') }}">
                     <button type="button" style="width:100%;">
@@ -56,7 +52,6 @@
             </div>
         </div>
         <div class="w3-row">
-            <div class="w3-container w3-quarter"></div>
             <div class="w3-container w3-half">
                 <a class="button" href="{{ url_for('colecao', type='brinquedos') }}">
                     <button type="button" style="width:100%;">
@@ -64,19 +59,79 @@
                     </button>
                 </a>
             </div>
-        </div>
-        <div class="w3-row">
-            <div class="w3-container w3-quarter"></div>
             <div class="w3-container w3-half">
-                <a class="button" href="{{ url_for('colecao', type='materiais') }}">
+                <a class="button" href="{{ url_for('colecao', type='cozinha') }}">
                     <button type="button" style="width:100%;">
-                        {{ _('Materiais de escritório e Ferramentas') }}
+                        {{ _('Cozinha') }}
                     </button>
                 </a>
             </div>
         </div>
         <div class="w3-row">
-            <div class="w3-container w3-quarter"></div>
+            <div class="w3-container w3-half">
+                <a class="button" href="{{ url_for('colecao', type='mobiliario') }}">
+                    <button type="button" style="width:100%;">
+                        {{ _('Mobiliário') }}
+                    </button>
+                </a>
+            </div>
+            <div class="w3-container w3-half">
+                <a class="button" href="{{ url_for('colecao', type='ornamentos') }}">
+                    <button type="button" style="width:100%;">
+                        {{ _('Ornamentos') }}
+                    </button>
+                </a>
+            </div>
+        </div>
+        <div class="w3-row">
+            <div class="w3-container w3-half">
+                <a class="button" href="{{ url_for('colecao', type='vasos') }}">
+                    <button type="button" style="width:100%;">
+                        {{ _('Vasos') }}
+                    </button>
+                </a>
+            </div>
+            <div class="w3-container w3-half">
+                <a class="button" href="{{ url_for('colecao', type='textil') }}">
+                    <button type="button" style="width:100%;">
+                        {{ _('Têxtil') }}
+                    </button>
+                </a>
+            </div>
+        </div>
+        <div class="w3-row">
+            <div class="w3-container w3-half">
+                <a class="button" href="{{ url_for('colecao', type='iluminacao') }}">
+                    <button type="button" style="width:100%;">
+                        {{ _('Iluminação') }}
+                    </button>
+                </a>
+            </div>
+            <div class="w3-container w3-half">
+                <a class="button" href="{{ url_for('colecao', type='escritorio') }}">
+                    <button type="button" style="width:100%;">
+                        {{ _('Escritório') }}
+                    </button>
+                </a>
+            </div>
+        </div>
+        <div class="w3-row">
+            <div class="w3-container w3-half">
+                <a class="button" href="{{ url_for('colecao', type='esculturas') }}">
+                    <button type="button" style="width:100%;">
+                        {{ _('Esculturas') }}
+                    </button>
+                </a>
+            </div>
+            <div class="w3-container w3-half">
+                <a class="button" href="{{ url_for('colecao', type='ferramentas') }}">
+                    <button type="button" style="width:100%;">
+                        {{ _('Ferramentas') }}
+                    </button>
+                </a>
+            </div>
+        </div>
+        <div class="w3-row">
             <div class="w3-container w3-half">
                 <a class="button" href="{{ url_for('colecao', type='miscelânea') }}">
                     <button type="button" style="width:100%;">
@@ -84,10 +139,6 @@
                     </button>
                 </a>
             </div>
-        </div>
-        <div class="w3-row">
-            <div class="w3-container w3-half"></div>
-            <div class="w3-container w3-half"></div>
         </div>
     </div>
 {% endblock %}

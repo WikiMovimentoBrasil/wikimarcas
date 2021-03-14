@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-03-14 03:01-0300\n"
+"POT-Creation-Date: 2021-03-14 06:50-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -95,23 +95,55 @@ msgid ""
 "abaixo para começar."
 msgstr ""
 
-#: templates/inicio.html:43
+#: templates/inicio.html:42
 msgid "Roupas"
 msgstr ""
 
-#: templates/inicio.html:53
+#: templates/inicio.html:49
 msgid "Bonecas"
 msgstr ""
 
-#: templates/inicio.html:63
+#: templates/inicio.html:58
 msgid "Brinquedos"
 msgstr ""
 
-#: templates/inicio.html:73
-msgid "Materiais de escritório e Ferramentas"
+#: templates/inicio.html:65
+msgid "Cozinha"
 msgstr ""
 
-#: templates/inicio.html:83
+#: templates/inicio.html:74
+msgid "Mobiliário"
+msgstr ""
+
+#: templates/inicio.html:81
+msgid "Ornamentos"
+msgstr ""
+
+#: templates/inicio.html:90
+msgid "Vasos"
+msgstr ""
+
+#: templates/inicio.html:97
+msgid "Têxtil"
+msgstr ""
+
+#: templates/inicio.html:106
+msgid "Iluminação"
+msgstr ""
+
+#: templates/inicio.html:113
+msgid "Escritório"
+msgstr ""
+
+#: templates/inicio.html:122
+msgid "Esculturas"
+msgstr ""
+
+#: templates/inicio.html:129
+msgid "Ferramentas"
+msgstr ""
+
+#: templates/inicio.html:138
 msgid "Miscelânea"
 msgstr ""
 
