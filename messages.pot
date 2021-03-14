@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-03-13 02:14-0300\n"
+"POT-Creation-Date: 2021-03-14 02:43-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -233,7 +233,8 @@ msgid ""
 "selecione a opção "
 msgstr ""
 
-#: templates/item.html:277 templates/item.html:285
+#: templates/item.html:277 templates/item.html:285 templates/item.html:355
+#: templates/item.html:381
 msgid "Obra não tem marca conhecida ou não está visível"
 msgstr ""
 
@@ -253,7 +254,15 @@ msgstr ""
 msgid "Adicionar declaração"
 msgstr ""
 
-#: templates/item.html:391
+#: templates/item.html:369
+msgid "Adicionar a marca"
+msgstr ""
+
+#: templates/item.html:370
+msgid "como uma inscrição"
+msgstr ""
+
+#: templates/item.html:396
 msgid "Selecione um elemento"
 msgstr ""
 

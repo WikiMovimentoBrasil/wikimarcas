@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-03-13 02:14-0300\n"
+"POT-Creation-Date: 2021-03-14 02:43-0300\n"
 "PO-Revision-Date: 2021-03-04 13:11-0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -254,7 +254,8 @@ msgid ""
 msgstr ""
 "In cases where the object has no brand or is not visible, select the option "
 
-#: templates/item.html:277 templates/item.html:285
+#: templates/item.html:277 templates/item.html:285 templates/item.html:355
+#: templates/item.html:381
 msgid "Obra não tem marca conhecida ou não está visível"
 msgstr "Work has no known brand or is not visible"
 
@@ -274,7 +275,15 @@ msgstr "Select an option:"
 msgid "Adicionar declaração"
 msgstr "Add statement"
 
-#: templates/item.html:391
+#: templates/item.html:369
+msgid "Adicionar a marca"
+msgstr "Add the brand"
+
+#: templates/item.html:370
+msgid "como uma inscrição"
+msgstr "as a inscription"
+
+#: templates/item.html:396
 msgid "Selecione um elemento"
 msgstr "Select an element"
 
