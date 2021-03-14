@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-03-14 02:43-0300\n"
+"POT-Creation-Date: 2021-03-14 03:01-0300\n"
 "PO-Revision-Date: 2021-03-04 13:11-0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -245,14 +245,16 @@ msgid ""
 "Caso a marca não esteja cadastrada, selecione a opção inserir a marca "
 "como uma inscrição."
 msgstr ""
-"If the brand is not present, select the option to insert the brand as an inscription."
+"If the brand is not present, select the option to insert the brand as an "
+"inscription."
 
 #: templates/item.html:277
 msgid ""
 "Nos casos em que o objeto não possua marca ou esta não esteja visível, "
 "selecione a opção "
 msgstr ""
-"In cases where the object has no brand or is not visible, select the option "
+"In cases where the object has no brand or is not visible, select the "
+"option "
 
 #: templates/item.html:277 templates/item.html:285 templates/item.html:355
 #: templates/item.html:381
@@ -274,6 +276,10 @@ msgstr "Select an option:"
 #: templates/item.html:290
 msgid "Adicionar declaração"
 msgstr "Add statement"
+
+#: templates/item.html:346
+msgid "Declaração inserida com sucesso!"
+msgstr "Statement successfully registered!"
 
 #: templates/item.html:369
 msgid "Adicionar a marca"
