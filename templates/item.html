@@ -47,7 +47,7 @@
                     </a>
                 </div>
                 <a target="_blank" href="https://commons.wikimedia.org/wiki/{{ metadata.category }}">
-                    {{ _("Veja as imagens dessa obra no Wikimedia Commons") }}
+                    {{ _("Veja as imagens desse objeto no Wikimedia Commons") }}
                 </a>
             {% else %}
                 <img class="image_item" alt="{% if metadata.obra_label[0] %}{{ metadata.obra_label[0] }}{% else %}{{ metadata.obra_qid[0] }}{% endif %}"
@@ -274,7 +274,7 @@
                         <p style="font-size: 115%">
                             {{ _("Se o objeto possui uma marca visível nas imagens disponíveis, pesquise-a pelo nome no banco de dados.") }}
                             {{ _("Caso a marca não esteja cadastrada, selecione a opção inserir a marca como uma inscrição.") }}
-                            {{ _("Nos casos em que o objeto não possua marca ou esta não esteja visível, selecione a opção ") }} <i>"{{ _("Obra não tem marca conhecida ou não está visível") }}"</i>
+                            {{ _("Nos casos em que o objeto não possua marca ou esta não esteja visível, selecione a opção ") }} <i>"{{ _("Objeto não tem marca conhecida ou não está visível") }}"</i>
                         </p>
                         <label for="search_field" class="col-form-label" style="font-size: 125%">{{ _("Adicionar declaração:") }}</label>
                         <input type="search" class="form-control" placeholder="{{ _('Pesquise') }}" id="search_field" style="font-size: 125%">
@@ -282,7 +282,7 @@
                         <span id="select_instruction" style="font-size: 125%">{{ _("Selecione uma opção:") }}</span><br>
                         <form id="search_results">
                             <input type="radio" id="marca_desconhecida" name="claim_option" data-tipo="unknownvalue" value="unknownvalueforbrand">
-                            <label for="marca_desconhecida" style="font-size: 125%"><i>{{ _("Obra não tem marca conhecida ou não está visível") }}</i></label><br>
+                            <label for="marca_desconhecida" style="font-size: 125%"><i>{{ _("Objeto não tem marca conhecida ou não está visível") }}</i></label><br>
                         </form>
                     </div>
                     <div class="modal-footer" id="secondModal">
@@ -352,7 +352,7 @@
             });
         });
         $("#search_field").bind('keyup', function(event){
-            var unknown_brand = "{{ _('Obra não tem marca conhecida ou não está visível') }}";
+            var unknown_brand = "{{ _('Objeto não tem marca conhecida ou não está visível') }}";
             if ($(this)[0].value){
                 search();
             }
@@ -378,7 +378,7 @@
                 dataType: "json",
 
                 success: function(response) {
-                    var unknown_brand = "{{ _('Obra não tem marca conhecida ou não está visível') }}";
+                    var unknown_brand = "{{ _('Objeto não tem marca conhecida ou não está visível') }}";
                     $("#search_results").empty()
 
                     $("#search_results").append('<input type="radio" id="marca_desconhecida" name="claim_option" data-tipo="unknownvalue" value="unknownvalueforbrand"> ' +

@@ -55,18 +55,17 @@ msgstr ""
 #: templates/colecao.html:18
 #, python-format
 msgid ""
-"Esta seleção de obras apresenta <i>%(p180)s</i> do acervo do Museu do "
+"Esta seleção de objetos apresenta <i>%(p180)s</i> do acervo do Museu do "
 "Ipiranga."
-msgstr "This selection of works of Museu do Ipiranga presents <i>%(p180)s</i>"
+msgstr "This selection of objects of Museu do Ipiranga presents <i>%(p180)s</i>"
 
 #: templates/colecao.html:22
-#, python-format
 msgid ""
-"São %(quant)s obras selecionadas. Para navegar por outras seleções de "
-"obras, volte à %(home)s."
+"São %(quant)s objetos selecionadas. Para navegar por outras seleções de "
+"objetos, volte à %(home)s."
 msgstr ""
-"There are %(quant)s works selected. To browse other selections of works, "
-"return to the %(home)s."
+"There are %(quant)s objects selected. To browse other selections of "
+"objects, return to the %(home)s."
 
 #: templates/error.html:3 templates/error.html:8
 msgid "Algo deu errado!"
@@ -161,8 +160,8 @@ msgid "Miscelânea"
 msgstr "Miscellany"
 
 #: templates/item.html:50
-msgid "Veja as imagens dessa obra no Wikimedia Commons"
-msgstr "See the images of this work at Wikimedia Commons"
+msgid "Veja as imagens desse objeto no Wikimedia Commons"
+msgstr "See the images of this object at Wikimedia Commons"
 
 #: templates/item.html:57
 msgid "Veja essa imagem no Wikimedia Commons"
@@ -290,8 +289,8 @@ msgstr ""
 
 #: templates/item.html:277 templates/item.html:285 templates/item.html:355
 #: templates/item.html:381
-msgid "Obra não tem marca conhecida ou não está visível"
-msgstr "Work has no known brand or is not visible"
+msgid "Objeto não tem marca conhecida ou não está visível"
+msgstr "Object has no known brand or is not visible"
 
 #: templates/item.html:279
 msgid "Adicionar declaração:"
@@ -355,8 +354,8 @@ msgstr ""
 "collection to identify their origin, what they portray, the history of "
 "the piece. In the application <b>Wiki Museu do Ipiranga - What clothes "
 "should I wear?</b>, you participate in this curatorial work, describing "
-"the clothes and accessories of the people portrayed in works at the Museu"
-" do Ipiranga."
+"the clothes and accessories of the people portrayed in objects at the "
+"Museu do Ipiranga."
 
 #: templates/sobre.html:18
 msgid ""
@@ -384,11 +383,11 @@ msgstr ""
 #: templates/sobre.html:20
 #, python-format
 msgid ""
-"Mãos à obra, temos agora %(number_works)s obras cujas informações "
+"Mãos à obra, temos agora %(number_works)s objetos cujas informações "
 "precisam de sua ajuda!"
 msgstr ""
-"Hands on, we now have %(number_works)s works whose information need your "
-"help!"
+"Hands on, we now have %(number_works)s objects whose information need "
+"your help!"
 
 #: templates/sobre.html:24
 msgid "Flask"

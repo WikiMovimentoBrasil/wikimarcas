@@ -160,7 +160,7 @@ def sobre():
     with open(os.path.join(app.static_folder, 'queries.json'), encoding="utf-8") as category_queries:
         all_queries = json.load(category_queries)
 
-    quantidade = query_quantidade(all_queries["Quantidade_de_obras"]["query"])
+    quantidade = query_quantidade(all_queries["Quantidade_de_objetos"]["query"])
     return render_template('sobre.html',
                            username=username,
                            lang=get_locale(),
@@ -200,7 +200,7 @@ def colecao(type):
         return redirect(url_for('inicio'))
 
 
-# Página de visualização da obra e inserção de qualificadores
+# Página de visualização do objeto e inserção de qualificadores
 @app.route('/item/<qid>')
 def item(qid):
     username = get_username()

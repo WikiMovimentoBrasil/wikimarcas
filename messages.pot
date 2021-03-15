@@ -48,15 +48,15 @@ msgstr ""
 #: templates/colecao.html:18
 #, python-format
 msgid ""
-"Esta seleção de obras apresenta <i>%(p180)s</i> do acervo do Museu do "
+"Esta seleção de objetos apresenta <i>%(p180)s</i> do acervo do Museu do "
 "Ipiranga."
 msgstr ""
 
 #: templates/colecao.html:22
 #, python-format
 msgid ""
-"São %(quant)s obras selecionadas. Para navegar por outras seleções de "
-"obras, volte à %(home)s."
+"São %(quant)s objetos selecionadas. Para navegar por outras seleções de "
+"objetos, volte à %(home)s."
 msgstr ""
 
 #: templates/error.html:3 templates/error.html:8
@@ -148,7 +148,7 @@ msgid "Miscelânea"
 msgstr ""
 
 #: templates/item.html:50
-msgid "Veja as imagens dessa obra no Wikimedia Commons"
+msgid "Veja as imagens desse objeto no Wikimedia Commons"
 msgstr ""
 
 #: templates/item.html:57
@@ -267,7 +267,7 @@ msgstr ""
 
 #: templates/item.html:277 templates/item.html:285 templates/item.html:355
 #: templates/item.html:381
-msgid "Obra não tem marca conhecida ou não está visível"
+msgid "Objeto não tem marca conhecida ou não está visível"
 msgstr ""
 
 #: templates/item.html:279
@@ -343,7 +343,7 @@ msgstr ""
 #: templates/sobre.html:20
 #, python-format
 msgid ""
-"Mãos à obra, temos agora %(number_works)s obras cujas informações "
+"Mãos à obra, temos agora %(number_works)s objetos cujas informações "
 "precisam de sua ajuda!"
 msgstr ""
 
