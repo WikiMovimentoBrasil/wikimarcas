@@ -36,7 +36,6 @@ msgid "Projeto Novo Museu do Ipiranga"
 msgstr "Novo Museu do Ipiranga Project"
 
 #: templates/base.html:49
-#, python-format
 msgid ""
 "<i>Wiki Museu do Ipiranga - Qual a marca?</i> é um aplicativo "
 "desenvolvido no contexto do <i><b>%(projeto)s</b></i>, organizado pelo "
@@ -53,7 +52,6 @@ msgstr ""
 "Support Foundation</b>."
 
 #: templates/colecao.html:18
-#, python-format
 msgid ""
 "Esta seleção de objetos apresenta <i>%(p180)s</i> do acervo do Museu do "
 "Ipiranga."
@@ -61,7 +59,7 @@ msgstr "This selection of objects of Museu do Ipiranga presents <i>%(p180)s</i>"
 
 #: templates/colecao.html:22
 msgid ""
-"São %(quant)s objetos selecionadas. Para navegar por outras seleções de "
+"São %(quant)s objetos selecionados. Para navegar por outras seleções de "
 "objetos, volte à %(home)s."
 msgstr ""
 "There are %(quant)s objects selected. To browse other selections of "
@@ -381,7 +379,6 @@ msgstr ""
 "world can edit."
 
 #: templates/sobre.html:20
-#, python-format
 msgid ""
 "Mãos à obra, temos agora %(number_works)s objetos cujas informações "
 "precisam de sua ajuda!"
@@ -410,27 +407,22 @@ msgid "CC0"
 msgstr "CC0"
 
 #: templates/sobre.html:30
-#, python-format
 msgid "Este aplicativo foi desenvolvido em %(flask)s."
 msgstr "This app was developed in %(flask)s."
 
 #: templates/sobre.html:31
-#, python-format
 msgid "O código-fonte está disponível no %(github)s."
 msgstr "The source code is available at %(github)s."
 
 #: templates/sobre.html:32
-#, python-format
 msgid "Licença do cógido-fonte: %(license_code)s."
 msgstr "Source code license: %(license_code)s."
 
 #: templates/sobre.html:33
-#, python-format
 msgid "Licença de textos: %(license_text)s."
 msgstr "Text license: %(license_text)s."
 
 #: templates/sobre.html:34
-#, python-format
 msgid "Licença dos metadados retornados do Wikidata: %(license_wikidata)s."
 msgstr "License of objects returned from Wikidata: %(license_wikidata)s."
 

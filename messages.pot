@@ -55,7 +55,7 @@ msgstr ""
 #: templates/colecao.html:22
 #, python-format
 msgid ""
-"São %(quant)s objetos selecionadas. Para navegar por outras seleções de "
+"São %(quant)s objetos selecionados. Para navegar por outras seleções de "
 "objetos, volte à %(home)s."
 msgstr ""
 
