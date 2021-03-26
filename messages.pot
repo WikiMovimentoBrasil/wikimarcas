@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-03-14 06:50-0300\n"
+"POT-Creation-Date: 2021-03-26 19:23-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -265,8 +265,8 @@ msgid ""
 "selecione a opção "
 msgstr ""
 
-#: templates/item.html:277 templates/item.html:285 templates/item.html:355
-#: templates/item.html:381
+#: templates/item.html:277 templates/item.html:285 templates/item.html:357
+#: templates/item.html:383
 msgid "Objeto não tem marca conhecida ou não está visível"
 msgstr ""
 
@@ -286,19 +286,26 @@ msgstr ""
 msgid "Adicionar declaração"
 msgstr ""
 
-#: templates/item.html:346
+#: templates/item.html:330
 msgid "Declaração inserida com sucesso!"
 msgstr ""
 
-#: templates/item.html:369
+#: templates/item.html:331
+msgid ""
+"Ocorreu algum erro! Verifique se selecionou uma opção. Caso o erro "
+"persista, por favor, reporte em "
+"https://github.com/WikiMovimentoBrasil/wikimarcas/issues"
+msgstr ""
+
+#: templates/item.html:371
 msgid "Adicionar a marca"
 msgstr ""
 
-#: templates/item.html:370
+#: templates/item.html:372
 msgid "como uma inscrição"
 msgstr ""
 
-#: templates/item.html:396
+#: templates/item.html:398
 msgid "Selecione um elemento"
 msgstr ""
 

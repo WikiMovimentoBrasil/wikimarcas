@@ -19,7 +19,7 @@
         <br>
         {% set quantidade %}{{ collection|length }}{% endset %}
         {% set pginicial %}<a tabindex="0" aria-label='{{_("Página inicial")}}' href='{{ url_for("inicio") }}'>{{_("Página inicial")}}</a>{% endset %}
-        {{ _("São %(quant)s objetos selecionados. Para navegar por outras seleções de obras, volte à %(home)s.", quant=quantidade, home=pginicial) }}
+        {{ _("São %(quant)s objetos selecionados. Para navegar por outras seleções de objetos, volte à %(home)s.", quant=quantidade, home=pginicial) }}
     </div>
     {% if collection %}
         <div id="pagination-container" style="padding: 30px"></div>

@@ -327,6 +327,8 @@
         })
 
         $('#addstatement').on('click', function() {
+            var sucesso = "{{ _('Declaração inserida com sucesso!') }}";
+            var erro = "{{ _('Ocorreu algum erro! Verifique se selecionou uma opção. Caso o erro persista, por favor, reporte em https://github.com/WikiMovimentoBrasil/wikimarcas/issues')}}";
             var claim = $("input[name='claim_option']:checked").val();
             var tipo = $("input[name='claim_option']:checked").attr('data-tipo');
             var qid = $(this).attr('data-qid');
@@ -343,11 +345,11 @@
                 dataType: "json",
 
                 success: function() {
-                    alert("{{ _('Declaração inserida com sucesso!') }}");
+                    alert(sucesso);
                     $('#addModal').modal('hide');
                     },
                 error: function() {
-                    alert("Ocorreu algum erro!");
+                    alert(erro);
                 }
             });
         });

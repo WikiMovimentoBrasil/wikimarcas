@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-03-14 06:50-0300\n"
+"POT-Creation-Date: 2021-03-26 19:23-0300\n"
 "PO-Revision-Date: 2021-03-04 13:11-0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -36,6 +36,7 @@ msgid "Projeto Novo Museu do Ipiranga"
 msgstr "Novo Museu do Ipiranga Project"
 
 #: templates/base.html:49
+#, python-format
 msgid ""
 "<i>Wiki Museu do Ipiranga - Qual a marca?</i> é um aplicativo "
 "desenvolvido no contexto do <i><b>%(projeto)s</b></i>, organizado pelo "
@@ -52,12 +53,14 @@ msgstr ""
 "Support Foundation</b>."
 
 #: templates/colecao.html:18
+#, python-format
 msgid ""
 "Esta seleção de objetos apresenta <i>%(p180)s</i> do acervo do Museu do "
 "Ipiranga."
 msgstr "This selection of objects of Museu do Ipiranga presents <i>%(p180)s</i>"
 
 #: templates/colecao.html:22
+#, python-format
 msgid ""
 "São %(quant)s objetos selecionados. Para navegar por outras seleções de "
 "objetos, volte à %(home)s."
@@ -285,8 +288,8 @@ msgstr ""
 "In cases where the object has no brand or is not visible, select the "
 "option "
 
-#: templates/item.html:277 templates/item.html:285 templates/item.html:355
-#: templates/item.html:381
+#: templates/item.html:277 templates/item.html:285 templates/item.html:357
+#: templates/item.html:383
 msgid "Objeto não tem marca conhecida ou não está visível"
 msgstr "Object has no known brand or is not visible"
 
@@ -306,19 +309,29 @@ msgstr "Select an option:"
 msgid "Adicionar declaração"
 msgstr "Add statement"
 
-#: templates/item.html:346
+#: templates/item.html:330
 msgid "Declaração inserida com sucesso!"
 msgstr "Statement successfully registered!"
 
-#: templates/item.html:369
+#: templates/item.html:331
+msgid ""
+"Ocorreu algum erro! Verifique se selecionou uma opção. Caso o erro "
+"persista, por favor, reporte em "
+"https://github.com/WikiMovimentoBrasil/wikimarcas/issues"
+msgstr ""
+"Something went wrong! Verify that you selected a option. In the error "
+"persists, please, report in  "
+"https://github.com/WikiMovimentoBrasil/wikimarcas/issues"
+
+#: templates/item.html:371
 msgid "Adicionar a marca"
 msgstr "Add the brand"
 
-#: templates/item.html:370
+#: templates/item.html:372
 msgid "como uma inscrição"
 msgstr "as a inscription"
 
-#: templates/item.html:396
+#: templates/item.html:398
 msgid "Selecione um elemento"
 msgstr "Select an element"
 
@@ -379,6 +392,7 @@ msgstr ""
 "world can edit."
 
 #: templates/sobre.html:20
+#, python-format
 msgid ""
 "Mãos à obra, temos agora %(number_works)s objetos cujas informações "
 "precisam de sua ajuda!"
@@ -407,22 +421,27 @@ msgid "CC0"
 msgstr "CC0"
 
 #: templates/sobre.html:30
+#, python-format
 msgid "Este aplicativo foi desenvolvido em %(flask)s."
 msgstr "This app was developed in %(flask)s."
 
 #: templates/sobre.html:31
+#, python-format
 msgid "O código-fonte está disponível no %(github)s."
 msgstr "The source code is available at %(github)s."
 
 #: templates/sobre.html:32
+#, python-format
 msgid "Licença do cógido-fonte: %(license_code)s."
 msgstr "Source code license: %(license_code)s."
 
 #: templates/sobre.html:33
+#, python-format
 msgid "Licença de textos: %(license_text)s."
 msgstr "Text license: %(license_text)s."
 
 #: templates/sobre.html:34
+#, python-format
 msgid "Licença dos metadados retornados do Wikidata: %(license_wikidata)s."
 msgstr "License of objects returned from Wikidata: %(license_wikidata)s."
 
@@ -445,7 +464,4 @@ msgstr "Menu"
 #: templates/tutorial.html:9
 msgid "Tutorial"
 msgstr "Tutorial"
-
-#~ msgid "Materiais de escritório e Ferramentas"
-#~ msgstr "Office Supplies and Tools"
 

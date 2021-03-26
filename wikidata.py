@@ -187,8 +187,8 @@ def filter_by_instancia(qids, lang="pt-br"):
                           "'. ?item rdfs:label ?item_label. ?item schema:description ?item_descr.} "
                           "VALUES ?item {"
                           + qids +
-                          "} VALUES ?instancia {wd:Q431289 wd:Q1412386 wd:Q167270 wd:Q5} "
-                          "?item wdt:P31 ?instancia. BIND(SUBSTR(STR(?item),32) AS ?item_qid) }")
+                          "} VALUES ?instancia {wd:Q6881511 wd:Q4830453 wd:Q431289 wd:Q1412386 wd:Q167270 wd:Q5} "
+                          "?item wdt:P31/wdt:P279* ?instancia. BIND(SUBSTR(STR(?item),32) AS ?item_qid) }")
     results = data["results"]["bindings"]
     query = []
     for item in results:
