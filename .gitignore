@@ -5,3 +5,4 @@ config.yaml
 Lib/
 Scripts/
 venv/
+static/moreimages.json
