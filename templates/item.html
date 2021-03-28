@@ -274,7 +274,8 @@
                         <p style="font-size: 115%">
                             {{ _("Se o objeto possui uma marca visível nas imagens disponíveis, pesquise-a pelo nome no banco de dados.") }}
                             {{ _("Caso a marca não esteja cadastrada, selecione a opção inserir a marca como uma inscrição.") }}
-                            {{ _("Nos casos em que o objeto não possua marca ou esta não esteja visível, selecione a opção ") }} <i>"{{ _("Objeto não tem marca conhecida ou não está visível") }}"</i>
+                            {{ _("Nos casos em que o objeto não possua marca, selecione a opção ") }} <i>"{{ _("Objeto não tem marca conhecida") }}"</i>
+                            {{ _(" e caso a marca não esteja visível nas imagens disponíveis, selecione a opção ") }} <i>"{{ _("Objeto não tem marca visível") }}</i>
                         </p>
                         <label for="search_field" class="col-form-label" style="font-size: 125%">{{ _("Adicionar declaração:") }}</label>
                         <input type="search" class="form-control" placeholder="{{ _('Pesquise') }}" id="search_field" style="font-size: 125%">
@@ -282,7 +283,9 @@
                         <span id="select_instruction" style="font-size: 125%">{{ _("Selecione uma opção:") }}</span><br>
                         <form id="search_results">
                             <input type="radio" id="marca_desconhecida" name="claim_option" data-tipo="unknownvalue" value="unknownvalueforbrand">
-                            <label for="marca_desconhecida" style="font-size: 125%"><i>{{ _("Objeto não tem marca conhecida ou não está visível") }}</i></label><br>
+                            <label for="marca_desconhecida" style="font-size: 125%"><i>{{ _("Objeto não tem marca conhecida") }}</i></label><br>
+                            <input type="radio" id="marca_nao_visível" name="claim_option" data-tipo="nonvisible" value="brandnonvisible">
+                            <label for="marca_nao_visível" style="font-size: 125%"><i>{{ _("Objeto não tem marca visível") }}</i></label><br>
                         </form>
                     </div>
                     <div class="modal-footer" id="secondModal">
@@ -354,14 +357,17 @@
             });
         });
         $("#search_field").bind('keyup', function(event){
-            var unknown_brand = "{{ _('Objeto não tem marca conhecida ou não está visível') }}";
+            var unknown_brand = "{{ _('Objeto não tem marca conhecida') }}";
+            var nonvisible = "{{ _('Objeto não tem marca visível') }}";
             if ($(this)[0].value){
                 search();
             }
             else {
                 $("#search_results").empty();
                 $("#search_results").append('<input type="radio" id="marca_desconhecida" name="claim_option" data-tipo="unknownvalue" value="unknownvalueforbrand"> ' +
-                        '<label for="marca_desconhecida" style="font-size: 125%"><i>'+unknown_brand+'</i></label><br>');
+                        '<label for="marca_desconhecida" style="font-size: 125%"><i>'+unknown_brand+'</i></label><br>'+
+                    '<input type="radio" id="marca_nao_visível" name="claim_option" data-tipo="nonvisible" value="brandnonvisible"> ' +
+                        '<label for="marca_nao_visível" style="font-size: 125%"><i>'+nonvisible+'</i></label><br>');
             }
         });
 
@@ -380,11 +386,14 @@
                 dataType: "json",
 
                 success: function(response) {
-                    var unknown_brand = "{{ _('Objeto não tem marca conhecida ou não está visível') }}";
+                    var unknown_brand = "{{ _('Objeto não tem marca conhecida') }}";
+                    var nonvisible = "{{ _('Objeto não tem marca visível') }}";
                     $("#search_results").empty()
 
                     $("#search_results").append('<input type="radio" id="marca_desconhecida" name="claim_option" data-tipo="unknownvalue" value="unknownvalueforbrand"> ' +
-                        '<label for="marca_desconhecida" style="font-size: 125%"><i>'+unknown_brand+'</i></label><br>');
+                        '<label for="marca_desconhecida" style="font-size: 125%"><i>'+unknown_brand+'</i></label><br>'+
+                    '<input type="radio" id="marca_nao_visível" name="claim_option" data-tipo="nonvisible" value="brandnonvisible"> ' +
+                        '<label for="marca_nao_visível" style="font-size: 125%"><i>'+nonvisible+'</i></label><br>');
 
                     $("#search_results").append('<input type="radio" id="marca_sem_qid" name="claim_option" data-tipo="P1684" value="'+input+'"> ' +
                         '<label for="marca_sem_qid" style="font-size: 125%">'+add_brand+' <b style="color: #004266;font-size: 125%">'+input+'</b> '+as_descr+'</label><br>');

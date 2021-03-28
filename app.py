@@ -8,6 +8,7 @@ from wikidata import query_by_type, query_metadata_of_work, query_brands_metadat
     api_category_members, api_post_request, filter_by_instancia, query_quantidade, query_next_qid
 from oauth_wikidata import get_username, get_token
 from requests_oauthlib import OAuth1Session
+from datetime import datetime
 
 __dir__ = os.path.dirname(__file__)
 app = Flask(__name__)
@@ -244,47 +245,60 @@ def add_statement():
         data = request.get_json()
         qid = data['id']
         pid = data['tipo']  # Tipo de qualificador
-        snaktype = 'value'
-        token = get_token()
+        username = get_username()
+        today = datetime.today().strftime('%Y-%m-%dT%H:%M:%S')
+        if pid != 'nonvisible':
+            snaktype = 'value'
+            token = get_token()
 
-        params = {
-            "action": "wbcreateclaim",
-            "format": "json",
-            "entity": qid,
-            "property": pid,
-            "snaktype": snaktype,
-            "token": token
-        }
-
-        if pid == 'P1684':
-            claim = data['claim']
-            params["value"] = "{\"text\":\"" + str(claim) + "\",\"language\":\"" + pt_to_ptbr(get_locale()) + "\"}",
-        elif pid == 'unknownvalue':
-            params["snaktype"] = 'somevalue'
-            params["property"] = 'P1716'
-        elif pid == 'P1716':
-            claim = data['claim'].replace("Q", "")
-            params["value"] = "{\"entity-type\":\"item\",\"numeric-id\":" + str(claim) + "}"
-        else:
-            return jsonify("204")
-
-        results = api_post_request(params)
-
-        if pid == 'P1684':
-            stat_id = get_claim(qid, pid, claim)
-            new_params = {
-                "action": "wbsetqualifier",
+            params = {
+                "action": "wbcreateclaim",
                 "format": "json",
-                "claim": stat_id,
-                "property": 'P3831',
-                "value": "{\"entity-type\":\"item\",\"numeric-id\":431289}",
-                "snaktype": "value",
+                "entity": qid,
+                "property": pid,
+                "snaktype": snaktype,
                 "token": token
             }
 
-            api_post_request(new_params)
+            if pid == 'P1684':
+                claim = data['claim']
+                params["value"] = "{\"text\":\"" + str(claim) + "\",\"language\":\"" + pt_to_ptbr(get_locale()) + "\"}",
+            elif pid == 'unknownvalue':
+                params["snaktype"] = 'somevalue'
+                params["property"] = 'P1716'
+            elif pid == 'P1716':
+                claim = data['claim'].replace("Q", "")
+                params["value"] = "{\"entity-type\":\"item\",\"numeric-id\":" + str(claim) + "}"
+            else:
+                return jsonify("204")
 
-        return jsonify(results.status_code)
+            results = api_post_request(params)
+
+            if pid == 'P1684':
+                stat_id = get_claim(qid, pid, claim)
+                new_params = {
+                    "action": "wbsetqualifier",
+                    "format": "json",
+                    "claim": stat_id,
+                    "property": 'P3831',
+                    "value": "{\"entity-type\":\"item\",\"numeric-id\":431289}",
+                    "snaktype": "value",
+                    "token": token
+                }
+
+                api_post_request(new_params)
+
+            return jsonify(results.status_code)
+        else:
+            with open(os.path.join(app.static_folder, 'moreimages.json'), encoding="utf-8") as need_more_images:
+                values = json.load(need_more_images)
+                if qid in values:
+                    values[qid].append({"user": username, "data": today})
+                else:
+                    values[qid] = [{"user": username, "data": today}]
+            with open(os.path.join(app.static_folder, 'moreimages.json'), 'w', encoding="utf-8") as need_more_images:
+                json.dump(values, need_more_images, ensure_ascii=False)
+            return jsonify("200")
     else:
         return jsonify("204")
 
