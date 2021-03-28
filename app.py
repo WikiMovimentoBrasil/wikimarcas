@@ -211,10 +211,13 @@ def item(qid):
 
     metadata_query = all_queries["Metadados"]["query"].replace("LANGUAGE", lang).replace("QIDDAOBRA", qid)
     brands_query = all_queries["Marcas"]["query"].replace("LANGUAGE", lang).replace("QIDDAOBRA", qid)
+    all_objects_query = all_queries["Todos"]["query"].replace("LANGUAGE", lang).replace("QIDDAOBRA", qid)
     next_qid_query = all_queries["Next_qid"]["query"].replace("QIDDAOBRA", qid)
     work_metadata = query_metadata_of_work(metadata_query, lang=lang)
     work_depicts = query_brands_metadata(brands_query, qid)
     next_qid = query_next_qid(next_qid_query)
+    if not next_qid:
+        next_qid = query_next_qid(all_objects_query)
 
     if "category" in work_metadata:
         category_images = api_category_members(work_metadata["category"])
