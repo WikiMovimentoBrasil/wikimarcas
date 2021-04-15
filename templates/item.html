@@ -10,6 +10,7 @@
 
 {% block scripts %}
     <script src="{{ url_for('static', filename= 'jquery.zoom.js') }}"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js" ></script>
 {% endblock %}
 
 {% block content %}
@@ -322,11 +323,19 @@
         })
 
         $('#addModal').on('hidden.bs.modal', function () {
+            var unknown_brand = "{{ _('Objeto não tem marca conhecida') }}";
+            var nonvisible = "{{ _('Objeto não tem marca visível') }}";
+
             $(this).find("#secondModal #addstatement").attr('data-stat-id',"");
             $(this).find("#secondModal #addstatement").attr('data-qid',"");
             $(this).find("#search_field").empty();
+            $("#search_field").val('');
             $("#search_field").trigger('reset');
             $("#search_results").empty();
+            $("#search_results").append('<input type="radio" id="marca_desconhecida" name="claim_option" data-tipo="unknownvalue" value="unknownvalueforbrand"> ' +
+                        '<label for="marca_desconhecida" style="font-size: 125%"><i>'+unknown_brand+'</i></label><br>'+
+                    '<input type="radio" id="marca_nao_visível" name="claim_option" data-tipo="nonvisible" value="brandnonvisible"> ' +
+                        '<label for="marca_nao_visível" style="font-size: 125%"><i>'+nonvisible+'</i></label><br>');
         })
 
         $('#addstatement').on('click', function() {
@@ -347,8 +356,12 @@
                 contentType: "application/json",
                 dataType: "json",
 
-                success: function() {
-                    alert(sucesso);
+                success: function(response) {
+                    if (response === "200") {
+                        alert(sucesso);
+                    } else {
+                        alert(response);
+                    }
                     $('#addModal').modal('hide');
                     },
                 error: function() {
@@ -356,7 +369,7 @@
                 }
             });
         });
-        $("#search_field").bind('keyup', function(event){
+        $("#search_field").bind('keyup', _.debounce(function(event){
             var unknown_brand = "{{ _('Objeto não tem marca conhecida') }}";
             var nonvisible = "{{ _('Objeto não tem marca visível') }}";
             if ($(this)[0].value){
@@ -369,7 +382,7 @@
                     '<input type="radio" id="marca_nao_visível" name="claim_option" data-tipo="nonvisible" value="brandnonvisible"> ' +
                         '<label for="marca_nao_visível" style="font-size: 125%"><i>'+nonvisible+'</i></label><br>');
             }
-        });
+        }, 500));
 
         function search(){
             var input = $('#search_field')[0].value;

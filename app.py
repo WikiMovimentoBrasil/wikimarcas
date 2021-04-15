@@ -3,7 +3,7 @@ import os
 import json
 import requests
 from flask import Flask, render_template, request, redirect, session, url_for, jsonify, g
-from flask_babel import Babel
+from flask_babel import Babel, gettext
 from wikidata import query_by_type, query_metadata_of_work, query_brands_metadata, post_search_entity,\
     api_category_members, api_post_request, filter_by_instancia, query_quantidade, query_next_qid
 from oauth_wikidata import get_username, get_token
@@ -234,6 +234,7 @@ def item(qid):
                            qid=qid,
                            next_qid=next_qid)
 
+
 ##############################################################
 # CONSULTAS E REQUISIÇÕES
 ##############################################################
@@ -298,7 +299,7 @@ def add_statement():
                     values[qid] = [{"user": username, "data": today}]
             with open(os.path.join(app.static_folder, 'moreimages.json'), 'w', encoding="utf-8") as need_more_images:
                 json.dump(values, need_more_images, ensure_ascii=False)
-            return jsonify("200")
+            return jsonify(gettext(u'Obrigado! Sua declaração de que esta obra necessita de mais imagens foi inserida no nosso banco de dados com sucesso!'))
     else:
         return jsonify("204")
 
