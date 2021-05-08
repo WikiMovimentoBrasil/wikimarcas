@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-03-26 19:23-0300\n"
+"POT-Creation-Date: 2021-05-08 19:24-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,24 +17,74 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.9.0\n"
 
-#: templates/base.html:18 templates/colecao.html:21 templates/inicio.html:9
+#: templates/apps.html:9 templates/topnavbar.html:5
+msgid "Outros aplicativos"
+msgstr ""
+
+#: templates/apps.html:19
+msgid ""
+"A iniciativa do <b>Projeto Novo Museu do Ipiranga</b> tem desenvolvido "
+"uma série de aplicativos, chamada <b>Wiki Museu do Ipiranga</b>, com o "
+"objetivo de convidar você a atuar no trabalho de investigação e curadoria"
+" das obras e objetos do acervo do Museu do Ipiranga."
+msgstr ""
+
+#: templates/apps.html:30 templates/apps.html:34
+msgid "Logotipo Wiki Museu do Ipiranga - Quantos tem?"
+msgstr ""
+
+#: templates/apps.html:41
+msgid ""
+"O primeiro aplicativo, <b>Quantos tem?</b> te convida a contar quantos "
+"elementos estão presentes nas obras do acervo do Museu do Ipiranga."
+msgstr ""
+
+#: templates/apps.html:51 templates/apps.html:55
+msgid "Logotipo Wiki Museu do Ipiranga - Com que roupa eu vou?"
+msgstr ""
+
+#: templates/apps.html:62
+msgid ""
+"O segundo aplicativo, <b>Com que roupa eu vou?</b> te convida a descrever"
+" as roupas e os acessórios das pessoas retratadas em obras do acervo do "
+"Museu do Ipiranga."
+msgstr ""
+
+#: templates/apps.html:72 templates/apps.html:76 templates/base.html:39
+#: templates/base.html:41
+msgid "Logotipo Wiki Museu do Ipiranga - Qual a marca?"
+msgstr ""
+
+#: templates/apps.html:83
+msgid ""
+"O terceiro aplicativo, <b>Qual a marca?</b> te convida a identificar as "
+"marcas de objetos do acervo do Museu do Ipiranga."
+msgstr ""
+
+#: templates/apps.html:93 templates/apps.html:97
+msgid "Logotipo Wiki Museu do Ipiranga - O que retrata?"
+msgstr ""
+
+#: templates/apps.html:104
+msgid ""
+"O quarto aplicativo, <b>O que retrata?</b> te convida a identificar os "
+"motivos representados em objetos do acervo do Museu do Ipiranga."
+msgstr ""
+
+#: templates/base.html:20 templates/colecao.html:21 templates/inicio.html:9
 #: templates/topnavbar.html:2
 msgid "Página inicial"
 msgstr ""
 
-#: templates/base.html:18
+#: templates/base.html:20
 msgid "Wiki Museu do Ipiranga - Qual a marca?"
 msgstr ""
 
-#: templates/base.html:37 templates/base.html:39
-msgid "Logotipo Wiki Museu do Ipiranga - Qual a marca?"
-msgstr ""
-
-#: templates/base.html:48
+#: templates/base.html:50
 msgid "Projeto Novo Museu do Ipiranga"
 msgstr ""
 
-#: templates/base.html:49
+#: templates/base.html:51
 #, python-format
 msgid ""
 "<i>Wiki Museu do Ipiranga - Qual a marca?</i> é um aplicativo "
@@ -67,7 +117,7 @@ msgstr ""
 msgid "REPORTAR ERRO"
 msgstr ""
 
-#: templates/error.html:22 templates/item.html:228
+#: templates/error.html:22 templates/item.html:229
 msgid "VOLTAR À PÁGINA INICIAL"
 msgstr ""
 
@@ -147,165 +197,174 @@ msgstr ""
 msgid "Miscelânea"
 msgstr ""
 
-#: templates/item.html:50
+#: templates/item.html:51
 msgid "Veja as imagens desse objeto no Wikimedia Commons"
 msgstr ""
 
-#: templates/item.html:57
+#: templates/item.html:58
 msgid "Veja essa imagem no Wikimedia Commons"
 msgstr ""
 
-#: templates/item.html:65
+#: templates/item.html:66
 msgid ""
 "Faça a sua autenticação clicando no botão 'Autenticar-se' no canto "
 "superior direito"
 msgstr ""
 
-#: templates/item.html:70
+#: templates/item.html:71
 msgid "Objeto"
 msgstr ""
 
-#: templates/item.html:75
+#: templates/item.html:76
 msgid "Instância de"
 msgstr ""
 
-#: templates/item.html:86
+#: templates/item.html:87
 msgid "Coleção"
 msgstr ""
 
-#: templates/item.html:97
+#: templates/item.html:98
 msgid "Número de inventário"
 msgstr ""
 
-#: templates/item.html:107
+#: templates/item.html:108
 msgid "Data"
 msgstr ""
 
-#: templates/item.html:115
+#: templates/item.html:116
 msgid "Criador(a)"
 msgstr ""
 
-#: templates/item.html:126
+#: templates/item.html:127
 msgid "Material"
 msgstr ""
 
-#: templates/item.html:137
+#: templates/item.html:138
 msgid "Dimensões"
 msgstr ""
 
-#: templates/item.html:147
+#: templates/item.html:148
 msgid "Método de fabricação"
 msgstr ""
 
-#: templates/item.html:158
+#: templates/item.html:159
 msgid "Retrata"
 msgstr ""
 
-#: templates/item.html:169
+#: templates/item.html:170
 msgid "Versão audível"
 msgstr ""
 
-#: templates/item.html:173
+#: templates/item.html:174
 msgid "Seu navegador não suporta este elemento de áudio"
 msgstr ""
 
-#: templates/item.html:182
+#: templates/item.html:183
 msgid ""
 "Pesquise e insira a marca do objeto. Se não encontrá-la, adicione a "
 "inscrição da marca."
 msgstr ""
 
-#: templates/item.html:191
+#: templates/item.html:192
 msgid "Marca"
 msgstr ""
 
-#: templates/item.html:196
+#: templates/item.html:197
 msgid "Adicionar marca"
 msgstr ""
 
-#: templates/item.html:196
+#: templates/item.html:197
 msgid "Adicionar"
 msgstr ""
 
-#: templates/item.html:235
+#: templates/item.html:236
 msgid "PULAR ESTE ITEM"
 msgstr ""
 
-#: templates/item.html:249 templates/item.html:253 templates/item.html:270
+#: templates/item.html:250 templates/item.html:254 templates/item.html:271
 msgid "Declaração"
 msgstr ""
 
-#: templates/item.html:253
+#: templates/item.html:254
 msgid "Descrição da declaração"
 msgstr ""
 
-#: templates/item.html:256 templates/item.html:289
+#: templates/item.html:257 templates/item.html:293
 msgid "Cancelar"
 msgstr ""
 
-#: templates/item.html:259
+#: templates/item.html:260
 msgid "Ir para declaração"
 msgstr ""
 
-#: templates/item.html:275
+#: templates/item.html:276
 msgid ""
 "Se o objeto possui uma marca visível nas imagens disponíveis, pesquise-a "
 "pelo nome no banco de dados."
 msgstr ""
 
-#: templates/item.html:276
+#: templates/item.html:277
 msgid ""
 "Caso a marca não esteja cadastrada, selecione a opção inserir a marca "
 "como uma inscrição."
 msgstr ""
 
-#: templates/item.html:277
-msgid ""
-"Nos casos em que o objeto não possua marca ou esta não esteja visível, "
-"selecione a opção "
+#: templates/item.html:278
+msgid "Nos casos em que o objeto não possua marca, selecione a opção "
 msgstr ""
 
-#: templates/item.html:277 templates/item.html:285 templates/item.html:357
-#: templates/item.html:383
-msgid "Objeto não tem marca conhecida ou não está visível"
+#: templates/item.html:278 templates/item.html:287 templates/item.html:326
+#: templates/item.html:373 templates/item.html:402
+msgid "Objeto não tem marca conhecida"
 msgstr ""
 
 #: templates/item.html:279
+msgid ""
+" e caso a marca não esteja visível nas imagens disponíveis, selecione a "
+"opção "
+msgstr ""
+
+#: templates/item.html:279 templates/item.html:289 templates/item.html:327
+#: templates/item.html:374 templates/item.html:403
+msgid "Objeto não tem marca visível"
+msgstr ""
+
+#: templates/item.html:281
 msgid "Adicionar declaração:"
 msgstr ""
 
-#: templates/item.html:280
+#: templates/item.html:282
 msgid "Pesquise"
 msgstr ""
 
-#: templates/item.html:282
+#: templates/item.html:284
 msgid "Selecione uma opção:"
 msgstr ""
 
-#: templates/item.html:290
+#: templates/item.html:294
 msgid "Adicionar declaração"
 msgstr ""
 
-#: templates/item.html:330
+#: templates/item.html:342
 msgid "Declaração inserida com sucesso!"
 msgstr ""
 
-#: templates/item.html:331
+#: templates/item.html:343
 msgid ""
 "Ocorreu algum erro! Verifique se selecionou uma opção. Caso o erro "
 "persista, por favor, reporte em "
 "https://github.com/WikiMovimentoBrasil/wikimarcas/issues"
 msgstr ""
 
-#: templates/item.html:371
+#: templates/item.html:390
 msgid "Adicionar a marca"
 msgstr ""
 
-#: templates/item.html:372
+#: templates/item.html:391
 msgid "como uma inscrição"
 msgstr ""
 
-#: templates/item.html:398
+#: templates/item.html:420
 msgid "Selecione um elemento"
 msgstr ""
 
@@ -407,11 +466,11 @@ msgstr ""
 msgid "Ajuda"
 msgstr ""
 
-#: templates/topnavbar.html:14
+#: templates/topnavbar.html:15
 msgid "Autenticar-se"
 msgstr ""
 
-#: templates/topnavbar.html:16
+#: templates/topnavbar.html:17
 msgid "Menu"
 msgstr ""
 
