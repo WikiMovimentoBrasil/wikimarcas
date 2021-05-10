@@ -149,7 +149,7 @@ msgstr "Logo of Wiki Museu do Ipiranga"
 
 #: templates/inicio.html:26
 msgid "Bem-vindo(a) ao <i>Wiki Museu do Ipiranga - Qual a marca?</i>"
-msgstr "Welcome to the <i>Wiki Museu do Ipiranga - What clothes should I wear?</i>"
+msgstr "Welcome to the <i>Wiki Museu do Ipiranga - Which brand?</i>"
 
 #: templates/inicio.html:29
 msgid ""
@@ -421,7 +421,7 @@ msgid ""
 "acervo do Museu do Ipiranga."
 msgstr ""
 "Are you ready to be a collection researcher? This is what the <b>Wiki "
-"Museu do Ipiranga - What clothes should I wear?</b> app offers you: "
+"Museu do Ipiranga - Which brand?</b> app offers you: "
 "develop your research skills and learn more about the Ipiranga Museum "
 "collection."
 
@@ -437,10 +437,9 @@ msgstr ""
 "Curating the collection is one of the most important activities of the "
 "museum. Here, researchers -- and now you! -- look at the objects in the "
 "collection to identify their origin, what they portray, the history of "
-"the piece. In the application <b>Wiki Museu do Ipiranga - What clothes "
-"should I wear?</b>, you participate in this curatorial work, describing "
-"the clothes and accessories of the people portrayed in objects at the "
-"Museu do Ipiranga."
+"the piece. In the application <b>Wiki Museu do Ipiranga - Which brand?</b>, "
+"you participate in this curatorial work, describing the clothes and accessories "
+"of the people portrayed in objects at the Museu do Ipiranga."
 
 #: templates/sobre.html:18
 msgid ""
@@ -488,7 +487,7 @@ msgstr "GPL v3.0"
 
 #: templates/sobre.html:27
 msgid "CC-BY-SA 4.0 Internacional"
-msgstr "CC-BY-SA 4.0 Internacional"
+msgstr "CC-BY-SA 4.0 International"
 
 #: templates/sobre.html:28
 msgid "CC0"
