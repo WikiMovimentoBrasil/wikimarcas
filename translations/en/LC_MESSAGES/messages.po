@@ -69,7 +69,7 @@ msgstr "Logo of Wiki Museu do Ipiranga - Which brand?"
 msgid ""
 "O terceiro aplicativo, <b>Qual a marca?</b> te convida a identificar as "
 "marcas de objetos do acervo do Museu do Ipiranga."
-msgstr "Identify brands on objects of the Ipiranga Museum collection"
+msgstr ""
 "The third application, <b>Which brand?</b> invites you to identify "
 "the brand of objects from the Ipiranga Museum collection."
 
