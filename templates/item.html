@@ -137,8 +137,8 @@
                         <tr>
                             <th>{{ _("Dimensões") }}</th>
                             <td>
-                                {% set elem_parts_altura = metadata.altura.split('@') %}
-                                {% set elem_parts_altura = metadata.largura.split('@') %}
+                                {% set elem_parts_altura = metadata.altura[0].split('@') %}
+                                {% set elem_parts_altura = metadata.largura[0].split('@') %}
                                 {{elem_parts_altura[0]}} {{elem_parts_altura[1]}} &times; {{elem_parts_largura[0]}} {{elem_parts_largura[1]}}
                             </td>
                         </tr>
