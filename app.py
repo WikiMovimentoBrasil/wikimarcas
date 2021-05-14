@@ -298,7 +298,7 @@ def add_statement():
 
                 api_post_request(new_params)
 
-            return jsonify(results.status_code)
+            return jsonify("200")
         else:
             with open(os.path.join(app.static_folder, 'moreimages.json'), encoding="utf-8") as need_more_images:
                 values = json.load(need_more_images)
