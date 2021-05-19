@@ -20,8 +20,8 @@ a:hover:not(.button) {
 }
 
 .topnav {
-  background-color: #F46783;
-  overflow: hidden;
+    background-color: #F46783;
+    overflow: hidden;
 }
 
 .topnav a {
@@ -60,7 +60,10 @@ a:hover:not(.button) {
 }
 
 @media screen and (max-width: 600px) {
-    .topnav a:not(:first-child) {display: none;}
+    .topnav a:not(:first-child) {
+        display: none;
+    }
+
     .topnav a.icon {
         float: right;
         display: block;
@@ -68,12 +71,16 @@ a:hover:not(.button) {
 }
 
 @media screen and (max-width: 600px) {
-    .topnav.responsive {position: relative;}
+    .topnav.responsive {
+        position: relative;
+    }
+
     .topnav.responsive a.icon {
         position: absolute;
         right: 0;
         top: 0;
     }
+
     .topnav.responsive a {
         float: none;
         display: block;
@@ -85,6 +92,7 @@ a:hover:not(.button) {
     #metadata {
         width: 100%;
     }
+
     #image {
         width: 100%;
     }
@@ -103,7 +111,7 @@ a:hover:not(.button) {
 }
 
 .table-not-striped tbody tr:nth-of-type(odd) {
-    background-color: transparent!important;
+    background-color: transparent !important;
 }
 
 input {
@@ -124,33 +132,33 @@ button {
 
 .grid_image {
     overflow: hidden;
-    margin-top:20px;
-    position:relative;
-    float:left;
+    margin-top: 20px;
+    position: relative;
+    float: left;
 }
 
 .grid_image img {
-    display:block;
-    width:100%;
-    height:auto;
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
 .overlay {
-    position:absolute;
-    left:0;
-    right:0;
-    bottom:0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
     background-color: #F46783;
     overflow: hidden;
-    width:100%;
-    height:0;
+    width: 100%;
+    height: 0;
 }
 
 .text-area {
     position: absolute;
-    top:50%;
-    left:50%;
-    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     color: black;
     text-align: center;
 }
@@ -164,8 +172,25 @@ tbody {
     display: table;
 }
 
-.carousel-item{
-    transition: -webkit-transform .6s ease;
-    transition: transform .6s ease;
-    transition: transform .6s ease,-webkit-transform .6s ease;
+.owl-prev, .owl-next {
+    width: 15px;
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block !important;
+    border: 0px solid #434343;
+}
+
+.owl-prev {
+    left: 20px;
+}
+
+.owl-next {
+    right: 20px;
+}
+
+.owl-prev i, .owl-next i {
+    transform: scale(2, 2);
+    color: #434343;
 }
