@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-05-08 19:24-0300\n"
+"POT-Creation-Date: 2021-05-21 16:01-0300\n"
 "PO-Revision-Date: 2021-03-04 13:11-0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -29,61 +29,113 @@ msgid ""
 "objetivo de convidar você a atuar no trabalho de investigação e curadoria"
 " das obras e objetos do acervo do Museu do Ipiranga."
 msgstr ""
-"The initiative of the <b>Novo Museu do Ipiranga Project</b> has developed "
-"a series of applications, called <b>Wiki Museu do Ipiranga</b>, with the"
-"aim to invite you to work in the investigation and curation work"
-"of the items and objects from the Ipiranga Museum collection."
+"The initiative of the <b>Novo Museu do Ipiranga Project</b> has developed"
+" a series of applications, called <b>Wiki Museu do Ipiranga</b>, with the"
+" aim to invite you to work in the investigation and curation work of the "
+"items and objects from the Ipiranga Museum collection."
 
-#: templates/apps.html:30 templates/apps.html:34
+#: templates/apps.html:31 templates/apps.html:35
 msgid "Logotipo Wiki Museu do Ipiranga - Quantos tem?"
 msgstr "Logo of Wiki Museu do Ipiranga - How many?"
 
-#: templates/apps.html:41
+#: templates/apps.html:43
 msgid ""
-"O primeiro aplicativo, <b>Quantos tem?</b> te convida a contar quantos "
-"elementos estão presentes nas obras do acervo do Museu do Ipiranga."
+"<b>Quantos tem?</b> te convida a contar quantos elementos estão presentes"
+" nas obras do acervo do Museu do Ipiranga."
 msgstr ""
-"The first app, <b>How many?</b> invites you to count how many "
-"elements are present in the works of the Ipiranga Museum collection."
+"<b>How many?</b> invites you to count how many elements are present in "
+"the works of the Ipiranga Museum collection."
 
-#: templates/apps.html:51 templates/apps.html:55
+#: templates/apps.html:44
+msgid ""
+"Por exemplo, quantos cordeiros estão retratados no quadro <a "
+"target=\"_blank\" href=\"https://www.wikidata.org/Q52303216\"><i>Mulher "
+"na Janela Alimentando Cordeiros, Menino Sentado numa Banqueta</i></a>, de"
+" <a target=\"_blank\" "
+"href=\"https://pt.wikipedia.org/Adrien_Henri_Vital_van_Emelen\">Adrien "
+"Henri Vital van Emelen</a>?"
+msgstr ""
+"For example, how many lambs are depicted in the painting <a "
+"target=\"_blank\" href=\"https://www.wikidata.org/Q52303216\"><i>Mulher "
+"na Janela Alimentando Cordeiros, Menino Sentado numa Banqueta</i></a>, by"
+" <a target=\"_blank\" "
+"href=\"https://en.wikipedia.org/Adrien_Henri_Vital_van_Emelen\">Adrien "
+"Henri Vital van Emelen</a>?"
+
+#: templates/apps.html:55 templates/apps.html:59
 msgid "Logotipo Wiki Museu do Ipiranga - Com que roupa eu vou?"
 msgstr "Logo of Wiki Museu do Ipiranga - What clothes should I wear?"
 
-#: templates/apps.html:62
+#: templates/apps.html:67
 msgid ""
-"O segundo aplicativo, <b>Com que roupa eu vou?</b> te convida a descrever"
-" as roupas e os acessórios das pessoas retratadas em obras do acervo do "
-"Museu do Ipiranga."
+"<b>Com que roupa eu vou?</b> te convida a descrever as roupas e os "
+"acessórios das pessoas retratadas em obras do acervo do Museu do "
+"Ipiranga."
 msgstr ""
-"The second app, <b>What clothes should I wear?</b> invites you to describe "
-"the clothes and accessories of the people portrayed in works from the collection of"
+"<b>What clothes should I wear?</b> invites you to describe the clothes "
+"and accessories of the people portrayed in works from the collection of "
 "Ipiranga Museum."
 
-#: templates/apps.html:72 templates/apps.html:76 templates/base.html:39
+#: templates/apps.html:68
+msgid ""
+"Por exemplo, quais acessórios são usados por Dona Jessy de Souza Queiroz "
+"em seu <a target=\"_blank\" "
+"href=\"https://www.wikidata.org/Q52302832\"><i>retrato</i></a> por <a "
+"target=\"_blank\" href=\"https://pt.wikipedia.org/Karl_Ernst_Papf\">Karl "
+"Ernst Papf</a>?"
+msgstr ""
+"For example, what accessories are used by Dona Jessy de Souza Queiroz in "
+"her <a target=\"_blank\" "
+"href=\"https://www.wikidata.org/Q52302832\"><i>portrait</i></a> by <a "
+"target=\"_blank\" href=\"https://en.wikipedia.org/Karl_Ernst_Papf\">Karl "
+"Ernst Papf</a>?"
+
+#: templates/apps.html:79 templates/apps.html:83 templates/base.html:39
 #: templates/base.html:41
 msgid "Logotipo Wiki Museu do Ipiranga - Qual a marca?"
 msgstr "Logo of Wiki Museu do Ipiranga - Which brand?"
 
-#: templates/apps.html:83
+#: templates/apps.html:91
 msgid ""
-"O terceiro aplicativo, <b>Qual a marca?</b> te convida a identificar as "
-"marcas de objetos do acervo do Museu do Ipiranga."
+"<b>Qual a marca?</b> te convida a identificar as marcas de objetos do "
+"acervo do Museu do Ipiranga."
 msgstr ""
-"The third application, <b>Which brand?</b> invites you to identify "
-"the brand of objects from the Ipiranga Museum collection."
+"<b>Which brand?</b> invites you to identify the brand of objects from the"
+" Ipiranga Museum collection."
 
-#: templates/apps.html:93 templates/apps.html:97
-msgid "Logotipo Wiki Museu do Ipiranga - O que retrata?"
-msgstr "Logo of Wiki Museu do Ipiranga - What is depicted?"
-
-#: templates/apps.html:104
+#: templates/apps.html:92
 msgid ""
-"O quarto aplicativo, <b>O que retrata?</b> te convida a identificar os "
-"motivos representados em objetos do acervo do Museu do Ipiranga."
+"Por exemplo, qual a marca do brinquedo <a target=\"_blank\" "
+"href=\"https://www.wikidata.org/Q65033132\"><i>Trem de luxo Nº2</i></a>?"
 msgstr ""
-"The fourth application, <b>What is depited?</b> invites you to identify the "
-"motifs represented in objects from the Ipiranga Museum collection."
+"For example, which is the brand of the toy <a target=\"_blank\" "
+"href=\"https://www.wikidata.org/Q65033132\"><i>Trem de luxo Nº2</i></a>?"
+
+#: templates/apps.html:103 templates/apps.html:107
+msgid "Logotipo Wiki Museu do Ipiranga - Qual o ornamento?"
+msgstr "Logo of Wiki Museu do Ipiranga - What is the ornament?"
+
+#: templates/apps.html:115
+msgid ""
+"<b>Qual o ornamento?</b> te convida a identificar os motivos "
+"representados em objetos do acervo do Museu do Ipiranga."
+msgstr ""
+"<b>What is the ornament?</b> invites you to identify the motifs "
+"represented in objects from the Ipiranga Museum collection."
+
+#: templates/apps.html:116
+msgid ""
+"Por exemplo, qual tipo de flor está representada numa <a "
+"target=\"_blank\" href=\"https://www.wikidata.org/Q106210419\"><i>sopeira"
+" com tampa</i></a> produzida pelas <a target=\"_blank\" "
+"href=\"https://pt.wikipedia.org/Indústrias_Reunidas_Fábricas_Matarazzo\">Indústrias"
+" Reunidas Fábricas Matarazzo</a>?"
+msgstr ""
+"For example, what type of flower is represented in a <a target=\"_blank\""
+" href=\"https://www.wikidata.org/Q106210419\"><i>tureen with lid</i></a> "
+"produced by <a target=\"_blank\" "
+"href=\"https://pt.wikipedia.org/Indústrias_Reunidas_Fábricas_Matarazzo\">Indústrias"
+" Reunidas Fábricas Matarazzo</a>?"
 
 #: templates/base.html:20 templates/colecao.html:21 templates/inicio.html:9
 #: templates/topnavbar.html:2
@@ -139,7 +191,7 @@ msgstr "Something went wrong!"
 msgid "REPORTAR ERRO"
 msgstr "REPORT ERROR"
 
-#: templates/error.html:22 templates/item.html:229
+#: templates/error.html:22 templates/item.html:240
 msgid "VOLTAR À PÁGINA INICIAL"
 msgstr "GO TO HOMEPAGE"
 
@@ -223,15 +275,15 @@ msgstr "Tools"
 msgid "Miscelânea"
 msgstr "Miscellany"
 
-#: templates/item.html:51
+#: templates/item.html:37
 msgid "Veja as imagens desse objeto no Wikimedia Commons"
 msgstr "See the images of this object at Wikimedia Commons"
 
-#: templates/item.html:58
+#: templates/item.html:47
 msgid "Veja essa imagem no Wikimedia Commons"
 msgstr "See this image in Wikimedia Commons"
 
-#: templates/item.html:66
+#: templates/item.html:55
 msgid ""
 "Faça a sua autenticação clicando no botão 'Autenticar-se' no canto "
 "superior direito"
@@ -239,31 +291,31 @@ msgstr ""
 "Authenticate yourself by clicking on the 'Authenticate' button in the "
 "upper right corner"
 
-#: templates/item.html:71
+#: templates/item.html:61
 msgid "Objeto"
 msgstr "Object"
 
-#: templates/item.html:76
+#: templates/item.html:68
 msgid "Instância de"
 msgstr "Instance of"
 
-#: templates/item.html:87
+#: templates/item.html:81
 msgid "Coleção"
 msgstr "Collection"
 
-#: templates/item.html:98
+#: templates/item.html:94
 msgid "Número de inventário"
 msgstr "Inventory number"
 
-#: templates/item.html:108
+#: templates/item.html:104
 msgid "Data"
 msgstr "Date"
 
-#: templates/item.html:116
+#: templates/item.html:112
 msgid "Criador(a)"
 msgstr "Creator"
 
-#: templates/item.html:127
+#: templates/item.html:125
 msgid "Material"
 msgstr "Material"
 
@@ -271,23 +323,23 @@ msgstr "Material"
 msgid "Dimensões"
 msgstr "Dimensions"
 
-#: templates/item.html:148
+#: templates/item.html:149
 msgid "Método de fabricação"
 msgstr "Fabrication method"
 
-#: templates/item.html:159
+#: templates/item.html:162
 msgid "Retrata"
 msgstr "Depicts"
 
-#: templates/item.html:170
+#: templates/item.html:175
 msgid "Versão audível"
 msgstr "Audible version"
 
-#: templates/item.html:174
+#: templates/item.html:180
 msgid "Seu navegador não suporta este elemento de áudio"
 msgstr "Your browser does not support this audio element"
 
-#: templates/item.html:183
+#: templates/item.html:189
 msgid ""
 "Pesquise e insira a marca do objeto. Se não encontrá-la, adicione a "
 "inscrição da marca."
@@ -295,39 +347,39 @@ msgstr ""
 "Search for and enter the object's brand. If you can't find it, add the "
 "brand inscription."
 
-#: templates/item.html:192
+#: templates/item.html:198
 msgid "Marca"
 msgstr "Brand"
 
-#: templates/item.html:197
+#: templates/item.html:203
 msgid "Adicionar marca"
 msgstr "Add brand"
 
-#: templates/item.html:197
+#: templates/item.html:206
 msgid "Adicionar"
 msgstr "Add"
 
-#: templates/item.html:236
+#: templates/item.html:248
 msgid "PULAR ESTE ITEM"
 msgstr "SKIP THIS ITEM"
 
-#: templates/item.html:250 templates/item.html:254 templates/item.html:271
+#: templates/item.html:262 templates/item.html:268 templates/item.html:288
 msgid "Declaração"
 msgstr "Statement"
 
-#: templates/item.html:254
+#: templates/item.html:269
 msgid "Descrição da declaração"
 msgstr "Statement description"
 
-#: templates/item.html:257 templates/item.html:293
+#: templates/item.html:273 templates/item.html:320
 msgid "Cancelar"
 msgstr "Cancel"
 
-#: templates/item.html:260
+#: templates/item.html:277
 msgid "Ir para declaração"
 msgstr "Go to statement"
 
-#: templates/item.html:276
+#: templates/item.html:294
 msgid ""
 "Se o objeto possui uma marca visível nas imagens disponíveis, pesquise-a "
 "pelo nome no banco de dados."
@@ -335,7 +387,7 @@ msgstr ""
 "If the object has a visible brand on the available images, search for it "
 "by name in the database."
 
-#: templates/item.html:277
+#: templates/item.html:295
 msgid ""
 "Caso a marca não esteja cadastrada, selecione a opção inserir a marca "
 "como uma inscrição."
@@ -343,18 +395,18 @@ msgstr ""
 "If the brand is not present, select the option to insert the brand as an "
 "inscription."
 
-#: templates/item.html:278
+#: templates/item.html:296
 msgid "Nos casos em que o objeto não possua marca, selecione a opção "
 msgstr ""
 "In cases where the object has no brand or is not visible, select the "
 "option "
 
-#: templates/item.html:278 templates/item.html:287 templates/item.html:326
-#: templates/item.html:373 templates/item.html:402
+#: templates/item.html:297 templates/item.html:311 templates/item.html:354
+#: templates/item.html:402 templates/item.html:430
 msgid "Objeto não tem marca conhecida"
 msgstr "Object has no known brand or is not visible"
 
-#: templates/item.html:279
+#: templates/item.html:298
 msgid ""
 " e caso a marca não esteja visível nas imagens disponíveis, selecione a "
 "opção "
@@ -362,32 +414,32 @@ msgstr ""
 "In cases where the object has no brand or is not visible, select the "
 "option "
 
-#: templates/item.html:279 templates/item.html:289 templates/item.html:327
-#: templates/item.html:374 templates/item.html:403
+#: templates/item.html:299 templates/item.html:315 templates/item.html:355
+#: templates/item.html:403 templates/item.html:431
 msgid "Objeto não tem marca visível"
 msgstr "Object has no known brand or is not visible"
 
-#: templates/item.html:281
+#: templates/item.html:302
 msgid "Adicionar declaração:"
 msgstr "Add statement:"
 
-#: templates/item.html:282
+#: templates/item.html:303
 msgid "Pesquise"
 msgstr "Search"
 
-#: templates/item.html:284
+#: templates/item.html:306
 msgid "Selecione uma opção:"
 msgstr "Select an option:"
 
-#: templates/item.html:294
+#: templates/item.html:322
 msgid "Adicionar declaração"
 msgstr "Add statement"
 
-#: templates/item.html:342
+#: templates/item.html:370
 msgid "Declaração inserida com sucesso!"
 msgstr "Statement successfully registered!"
 
-#: templates/item.html:343
+#: templates/item.html:371
 msgid ""
 "Ocorreu algum erro! Verifique se selecionou uma opção. Caso o erro "
 "persista, por favor, reporte em "
@@ -397,15 +449,15 @@ msgstr ""
 "persists, please, report in  "
 "https://github.com/WikiMovimentoBrasil/wikimarcas/issues"
 
-#: templates/item.html:390
+#: templates/item.html:418
 msgid "Adicionar a marca"
 msgstr "Add the brand"
 
-#: templates/item.html:391
+#: templates/item.html:419
 msgid "como uma inscrição"
 msgstr "as a inscription"
 
-#: templates/item.html:420
+#: templates/item.html:448
 msgid "Selecione um elemento"
 msgstr "Select an element"
 
@@ -421,9 +473,8 @@ msgid ""
 "acervo do Museu do Ipiranga."
 msgstr ""
 "Are you ready to be a collection researcher? This is what the <b>Wiki "
-"Museu do Ipiranga - Which brand?</b> app offers you: "
-"develop your research skills and learn more about the Ipiranga Museum "
-"collection."
+"Museu do Ipiranga - Which brand?</b> app offers you: develop your "
+"research skills and learn more about the Ipiranga Museum collection."
 
 #: templates/sobre.html:17
 msgid ""
@@ -437,9 +488,10 @@ msgstr ""
 "Curating the collection is one of the most important activities of the "
 "museum. Here, researchers -- and now you! -- look at the objects in the "
 "collection to identify their origin, what they portray, the history of "
-"the piece. In the application <b>Wiki Museu do Ipiranga - Which brand?</b>, "
-"you participate in this curatorial work, describing the clothes and accessories "
-"of the people portrayed in objects at the Museu do Ipiranga."
+"the piece. In the application <b>Wiki Museu do Ipiranga - Which "
+"brand?</b>, you participate in this curatorial work, describing the "
+"clothes and accessories of the people portrayed in objects at the Museu "
+"do Ipiranga."
 
 #: templates/sobre.html:18
 msgid ""
@@ -537,4 +589,7 @@ msgstr "Menu"
 #: templates/tutorial.html:9
 msgid "Tutorial"
 msgstr "Tutorial"
+
+#~ msgid "Logotipo Wiki Museu do Ipiranga - O que retrata?"
+#~ msgstr "Logo of Wiki Museu do Ipiranga - What is depicted?"
 
