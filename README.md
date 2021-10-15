@@ -23,7 +23,7 @@ Your config file should look like this:
 ```bash
 SECRET_KEY: "YOUR_SECRET_KEY"
 BABEL_DEFAULT_LOCALE: "pt"
-APPLICATION_ROOT: "wikiquantos/"
+APPLICATION_ROOT: "wikimarcas/"
 OAUTH_MWURI: "https://meta.wikimedia.org/w/index.php"
 CONSUMER_KEY: "YOUR_CONSUMER_KEY"
 CONSUMER_SECRET: "YOUR_CONSUMER_SECRET"
